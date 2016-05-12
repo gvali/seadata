@@ -1,0 +1,42 @@
+﻿@model Domain.Cruise
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Cruise</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CruiseLeader.Firstname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CruiseLeader.Firstname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CruiseName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CruiseName)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CruiseId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

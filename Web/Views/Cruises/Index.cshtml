@@ -1,0 +1,52 @@
+﻿@model Web.ViewModels.CruiseIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+    //Move them to some html helper class?
+    // https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx
+    // 2 parameter types and result type
+    Func<string, string, string> getSortProperty = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "_" + propertyName : propertyName;
+
+    Func<string, string, string> getSortIcon = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "fa-sort-up" : currentSortProperty == "_" + propertyName ? "fa-sort-down" : "fa-sort";
+}
+
+<<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.CruiseLeader.Firstname)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Cruises.FirstOrDefault().CruiseName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Cruises)
+            {
+                <tr>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.CruiseLeader.Firstname)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CruiseName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.CruiseId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.CruiseId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.CruiseId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
