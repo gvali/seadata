@@ -1,0 +1,1078 @@
+2016-05-13 00:10:53.4481 | DEBUG |          DAL.Helpers.EFRepositoryFactories.Dispose | InstanceId: 2420be0d-1b4d-4c50-82d7-dc480c570a48
+2016-05-13 00:12:14.3735 | DEBUG |            DAL.Helpers.EFRepositoryFactories..ctor | InstanceId: 1b4fdd77-4b59-4293-b006-b3d486e45b98
+2016-05-13 00:12:14.4575 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: ea2d431b-6606-4797-bdc4-d29578772d89
+2016-05-13 00:12:15.0299 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 1f81694f-a299-401f-b306-f5f8d459066d
+2016-05-13 00:12:15.0739 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 9c8ec442-dbff-4f6e-bb26-02c2e0aa9e39
+2016-05-13 00:12:15.1059 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52
+2016-05-13 00:12:15.1379 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 57fff82c-a5b6-436f-bb4e-71141fb650fd
+2016-05-13 00:12:15.2860 | INFO |                Identity.UserStore`11.FindByIdAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 userId:1
+2016-05-13 00:12:15.3301 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: aab36777-95d4-4670-8422-7b27088b3ca0 dbSet: System.Data.Entity.DbSet`1[Domain.Identity.UserInt]
+2016-05-13 00:12:22.8450 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:22 +03:00
+2016-05-13 00:12:22.8689 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Article','dbo.MultiLangString','dbo.Translation','dbo.Contact','dbo.ContactType','dbo.Person','dbo.CruiseLeader','dbo.Cruise','dbo.CruisePerson','dbo.CruiseStation','dbo.Station','dbo.ProjectLeader','dbo.Project','dbo.ProjectPerson','dbo.UserInt','dbo.UserClaimInt','dbo.UserLoginInt','dbo.UserRoleInt','dbo.RoleInt','dbo.StationMeasurement','dbo.Measurement')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2016-05-13 00:12:22.8850 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:22.9130 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:22 +03:00
+2016-05-13 00:12:23.0651 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 125 ms with result: 21
+2016-05-13 00:12:23.0651 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:23.1036 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:23 +03:00
+2016-05-13 00:12:23.9075 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:23 +03:00
+2016-05-13 00:12:27.7551 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2016-05-13 00:12:27.7666 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:27.7946 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 00:12:27.8106 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:27 +03:00
+2016-05-13 00:12:27.8466 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 18 ms with result: SqlDataReader
+2016-05-13 00:12:27.8657 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:27.9067 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:27 +03:00
+2016-05-13 00:12:27.9612 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:27 +03:00
+2016-05-13 00:12:28.3189 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2016-05-13 00:12:28.3349 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:28.3565 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 00:12:28.3750 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:28 +03:00
+2016-05-13 00:12:28.4030 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 8 ms with result: SqlDataReader
+2016-05-13 00:12:28.4190 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:28.4635 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:28 +03:00
+2016-05-13 00:12:28.7392 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:28 +03:00
+2016-05-13 00:12:29.4077 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Email] AS [Email], 
+    [Extent1].[EmailConfirmed] AS [EmailConfirmed], 
+    [Extent1].[PasswordHash] AS [PasswordHash], 
+    [Extent1].[SecurityStamp] AS [SecurityStamp], 
+    [Extent1].[PhoneNumber] AS [PhoneNumber], 
+    [Extent1].[PhoneNumberConfirmed] AS [PhoneNumberConfirmed], 
+    [Extent1].[TwoFactorEnabled] AS [TwoFactorEnabled], 
+    [Extent1].[LockoutEndDateUtc] AS [LockoutEndDateUtc], 
+    [Extent1].[LockoutEnabled] AS [LockoutEnabled], 
+    [Extent1].[AccessFailedCount] AS [AccessFailedCount], 
+    [Extent1].[UserName] AS [UserName], 
+    [Extent1].[FirstName] AS [FirstName], 
+    [Extent1].[LastName] AS [LastName]
+    FROM [dbo].[UserInt] AS [Extent1]
+    WHERE [Extent1].[Id] = @p0
+2016-05-13 00:12:29.4317 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:29.4317 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 00:12:29.4552 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:29 +03:00
+2016-05-13 00:12:29.4836 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 15 ms with result: SqlDataReader
+2016-05-13 00:12:29.4956 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:29.6677 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:29 +03:00
+2016-05-13 00:12:29.6838 | INFO |                Identity.UserStore`11.FindByIdAsync | result: 1@eesti.ee
+2016-05-13 00:12:29.7158 | INFO |                Identity.UserStore`11.FindByIdAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 userId:1
+2016-05-13 00:12:29.8797 | INFO |                Identity.UserStore`11.FindByIdAsync | result: 1@eesti.ee
+2016-05-13 00:12:29.8997 | INFO |        Identity.UserStore`11.GetSecurityStampAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 user.SecurityStamp:a6c69ea1-c4af-466a-9d30-cc7dfaae18ce
+2016-05-13 00:12:29.9437 | INFO |                Identity.UserStore`11.FindByIdAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 userId:1
+2016-05-13 00:12:29.9623 | INFO |                Identity.UserStore`11.FindByIdAsync | result: 1@eesti.ee
+2016-05-13 00:12:29.9763 | INFO |        Identity.UserStore`11.GetSecurityStampAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 user.SecurityStamp:a6c69ea1-c4af-466a-9d30-cc7dfaae18ce
+2016-05-13 00:12:30.0043 | INFO |                Identity.UserStore`11.FindByIdAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 userId:1
+2016-05-13 00:12:30.0203 | INFO |                Identity.UserStore`11.FindByIdAsync | result: 1@eesti.ee
+2016-05-13 00:12:30.0403 | INFO |                Identity.UserStore`11.GetRolesAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 user.Email:1@eesti.ee
+2016-05-13 00:12:30.0604 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 1dea5f45-2ce4-4b00-a103-be7208f8fa59 dbSet: System.Data.Entity.DbSet`1[Domain.Identity.RoleInt]
+2016-05-13 00:12:30.0924 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:30 +03:00
+2016-05-13 00:12:30.5927 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name]
+    FROM  [dbo].[RoleInt] AS [Extent1]
+    INNER JOIN [dbo].[UserRoleInt] AS [Extent2] ON ([Extent1].[Id] = [Extent2].[RoleId]) AND ([Extent2].[UserId] = @p__linq__0)
+2016-05-13 00:12:30.6127 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:30.6327 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:12:30.6542 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:30 +03:00
+2016-05-13 00:12:30.6925 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 21 ms with result: SqlDataReader
+2016-05-13 00:12:30.7165 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:30.7405 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:30 +03:00
+2016-05-13 00:12:30.7770 | INFO |                Identity.UserStore`11.FindByIdAsync | _instanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52 userId:1
+2016-05-13 00:12:30.8010 | INFO |                Identity.UserStore`11.FindByIdAsync | result: 1@eesti.ee
+2016-05-13 00:12:30.8250 | DEBUG |               Identity.UserStore`11.GetClaimsAsync | InstanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52
+2016-05-13 00:12:30.8931 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:30 +03:00
+2016-05-13 00:12:31.0012 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[ClaimType] AS [ClaimType], 
+    [Extent1].[ClaimValue] AS [ClaimValue]
+    FROM [dbo].[UserClaimInt] AS [Extent1]
+    WHERE [Extent1].[UserId] = @EntityKeyValue1
+2016-05-13 00:12:31.0212 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:31.0212 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:12:31.0492 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:31 +03:00
+2016-05-13 00:12:31.0832 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 12 ms with result: SqlDataReader
+2016-05-13 00:12:31.0972 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:31.1212 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:31 +03:00
+2016-05-13 00:12:31.9616 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 38480846-f3b5-48f9-99b3-99a3df6918cc dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:12:31.9816 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:31 +03:00
+2016-05-13 00:12:32.0457 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @p0
+2016-05-13 00:12:32.0577 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.0737 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 00:12:32.0897 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.1137 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 8 ms with result: SqlDataReader
+2016-05-13 00:12:32.1297 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.1537 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.1817 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: f8fb9fc7-b07a-4a9f-b784-0e5ac7cdbbb8 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:12:32.2098 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.3139 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 00:12:32.3339 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.3459 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.3699 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 6 ms with result: SqlDataReader
+2016-05-13 00:12:32.3819 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.5500 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.5740 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.6579 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseLeaderId] AS [CruiseLeaderId], 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[CruiseLeader] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @EntityKeyValue1
+2016-05-13 00:12:32.6780 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.6780 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:12:32.7030 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:12:32.7380 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 17 ms with result: SqlDataReader
+2016-05-13 00:12:32.7540 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:12:32.8051 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:12:32 +03:00
+2016-05-13 00:13:00.1064 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52
+2016-05-13 00:13:00.1625 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: ea2d431b-6606-4797-bdc4-d29578772d89
+2016-05-13 00:13:00.1745 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 1f81694f-a299-401f-b306-f5f8d459066d
+2016-05-13 00:13:00.1905 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 9c8ec442-dbff-4f6e-bb26-02c2e0aa9e39 Disposing:True
+2016-05-13 00:13:00.1905 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 3f8b5ae9-fada-4f74-9fcd-3ac8437c5f52
+2016-05-13 00:13:43.1915 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 23c1486b-8a22-417c-894a-7c7ad4b45fa8
+2016-05-13 00:13:43.2115 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 8bb51ca2-404c-468d-aa35-ae6c0fb1835e
+2016-05-13 00:13:43.2395 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 7f29360a-dcc4-44ec-a548-1787b12efa28
+2016-05-13 00:13:43.2606 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 8cbdf577-36d1-486c-ab9e-5a67e0247277
+2016-05-13 00:13:43.2796 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 66b9f379-cb02-439e-a72e-c9f78e11aac7
+2016-05-13 00:13:43.4357 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: a7e19ce2-f87c-4fd7-8919-4080e407de29 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:13:43.7082 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:13:43 +03:00
+2016-05-13 00:13:43.7522 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Started transaction at 13.05.2016 0:13:43 +03:00
+2016-05-13 00:13:44.3173 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+UPDATE [dbo].[Cruise]
+SET [CruiseName] = @0
+WHERE ([CruiseId] = @1)
+2016-05-13 00:13:44.3412 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @0: 'test' (Type = String, Size = 64)
+2016-05-13 00:13:44.3613 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @1: '1' (Type = Int32)
+2016-05-13 00:13:44.3773 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:13:44.4293 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 24 ms with result: 1
+2016-05-13 00:13:44.4413 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:13:44.4772 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Committed transaction at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:13:44.4972 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:13:44.5412 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 8cbdf577-36d1-486c-ab9e-5a67e0247277
+2016-05-13 00:13:44.5578 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 23c1486b-8a22-417c-894a-7c7ad4b45fa8
+2016-05-13 00:13:44.5713 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 8bb51ca2-404c-468d-aa35-ae6c0fb1835e
+2016-05-13 00:13:44.5853 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 7f29360a-dcc4-44ec-a548-1787b12efa28 Disposing:True
+2016-05-13 00:13:44.5973 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 8cbdf577-36d1-486c-ab9e-5a67e0247277
+2016-05-13 00:13:44.6373 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 74680283-bb5c-4a70-b6ec-9eb44430101c
+2016-05-13 00:13:44.6583 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 9bf0153d-ee85-4c98-a2be-3d9f3bac5c68
+2016-05-13 00:13:44.6728 | DEBUG |                                      DAL.UOW..ctor | InstanceId: f7187d03-3ddc-473d-ab77-7504fea52996
+2016-05-13 00:13:44.6891 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: bba2400d-3f35-40a8-8b0d-6a8dc924d320
+2016-05-13 00:13:44.6891 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 9779983a-940e-4d5e-b7a4-543eabf23f87
+2016-05-13 00:13:44.7331 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 1785f7ee-e901-4912-94f5-53cd75ac1a04 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:13:44.7451 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:13:44.7681 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+2016-05-13 00:13:44.7816 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:13:44.7816 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:13:44.8137 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 00:13:44.8137 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:13:44.8416 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:13:44 +03:00
+2016-05-13 00:14:01.1619 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: bba2400d-3f35-40a8-8b0d-6a8dc924d320
+2016-05-13 00:14:01.1779 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 74680283-bb5c-4a70-b6ec-9eb44430101c
+2016-05-13 00:14:01.1939 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 9bf0153d-ee85-4c98-a2be-3d9f3bac5c68
+2016-05-13 00:14:01.2185 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: f7187d03-3ddc-473d-ab77-7504fea52996 Disposing:True
+2016-05-13 00:14:01.2340 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: bba2400d-3f35-40a8-8b0d-6a8dc924d320
+2016-05-13 00:14:13.3040 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 86497a93-ae6c-478f-901c-8044375454ee
+2016-05-13 00:14:13.3271 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: a054f8b2-20c4-4b00-ac01-a2834c8de12e
+2016-05-13 00:14:13.3471 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 9818ac87-d8a8-4827-b432-f2a0304e7d52
+2016-05-13 00:14:13.3631 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 03d4ece1-9b45-429c-b9b5-f764b60563cf
+2016-05-13 00:14:13.3831 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 625cf7f7-bc22-4453-a25f-c9631a68e891
+2016-05-13 00:14:13.4121 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: ac69c482-5325-4cb3-a46d-5e43b3709380 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:13.4311 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.4511 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @p0
+2016-05-13 00:14:13.4671 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.4832 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '2' (Type = Int32)
+2016-05-13 00:14:13.5047 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.5272 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 5 ms with result: SqlDataReader
+2016-05-13 00:14:13.5432 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.5632 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.5832 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 821e0573-669a-41e3-b0b7-2bd817f2b9fa dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:14:13.6042 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.6233 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 00:14:13.6393 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.6593 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.6833 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 00:14:13.7018 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.7234 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.7433 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.7633 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseLeaderId] AS [CruiseLeaderId], 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[CruiseLeader] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @EntityKeyValue1
+2016-05-13 00:14:13.7833 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.8024 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+2016-05-13 00:14:13.8194 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.8394 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 4 ms with result: SqlDataReader
+2016-05-13 00:14:13.8514 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:13.8714 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:13 +03:00
+2016-05-13 00:14:13.9235 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 03d4ece1-9b45-429c-b9b5-f764b60563cf
+2016-05-13 00:14:13.9435 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 86497a93-ae6c-478f-901c-8044375454ee
+2016-05-13 00:14:13.9555 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: a054f8b2-20c4-4b00-ac01-a2834c8de12e
+2016-05-13 00:14:13.9795 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 9818ac87-d8a8-4827-b432-f2a0304e7d52 Disposing:True
+2016-05-13 00:14:13.9955 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 03d4ece1-9b45-429c-b9b5-f764b60563cf
+2016-05-13 00:14:20.0727 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 2323fd72-36e8-4bb2-b1b0-517d08ea2abe
+2016-05-13 00:14:20.1012 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 8fe6c9b7-8f3c-456d-9773-0037cd2f847d
+2016-05-13 00:14:20.1208 | DEBUG |                                      DAL.UOW..ctor | InstanceId: f35cb33e-1b1d-42da-b818-8ff6e5c69021
+2016-05-13 00:14:20.1488 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 94d27628-9bac-4f1b-8574-d6e7efcb948b
+2016-05-13 00:14:20.1648 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 82e1ec6f-91db-4189-9997-ac909d567a7c
+2016-05-13 00:14:20.1988 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 6508afc2-7804-426b-9a35-187604c4b2ae dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:20.2168 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.2408 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Started transaction at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.2608 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+UPDATE [dbo].[Cruise]
+SET [CruiseName] = @0
+WHERE ([CruiseId] = @1)
+2016-05-13 00:14:20.2808 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @0: 'hype' (Type = String, Size = 64)
+2016-05-13 00:14:20.3038 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @1: '2' (Type = Int32)
+2016-05-13 00:14:20.3249 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.3409 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: 1
+2016-05-13 00:14:20.3569 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:20.3849 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Committed transaction at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.4049 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.4249 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 94d27628-9bac-4f1b-8574-d6e7efcb948b
+2016-05-13 00:14:20.4449 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 2323fd72-36e8-4bb2-b1b0-517d08ea2abe
+2016-05-13 00:14:20.4609 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 8fe6c9b7-8f3c-456d-9773-0037cd2f847d
+2016-05-13 00:14:20.4849 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: f35cb33e-1b1d-42da-b818-8ff6e5c69021 Disposing:True
+2016-05-13 00:14:20.5015 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 94d27628-9bac-4f1b-8574-d6e7efcb948b
+2016-05-13 00:14:20.5530 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 3a2a06c2-43d4-44ed-a576-54de24a52238
+2016-05-13 00:14:20.5770 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 5788baef-3a21-493b-ad63-75b9d3d96f1b
+2016-05-13 00:14:20.6000 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 2b85fd7d-ce08-4985-9c38-10d2d3423407
+2016-05-13 00:14:20.6170 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: f6814029-a010-422a-9462-d9394c421130
+2016-05-13 00:14:20.6370 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 23f51abe-40c2-4f00-9533-e9d7efeb92f7
+2016-05-13 00:14:20.6610 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 728c4b04-5512-4c3c-adc0-e87f812fc9a7 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:20.6810 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.7036 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+2016-05-13 00:14:20.7211 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:20.7451 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.7691 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 4 ms with result: SqlDataReader
+2016-05-13 00:14:20.7691 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:20.7996 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:20 +03:00
+2016-05-13 00:14:20.8372 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: f6814029-a010-422a-9462-d9394c421130
+2016-05-13 00:14:20.8532 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 3a2a06c2-43d4-44ed-a576-54de24a52238
+2016-05-13 00:14:20.8732 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 5788baef-3a21-493b-ad63-75b9d3d96f1b
+2016-05-13 00:14:20.8932 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 2b85fd7d-ce08-4985-9c38-10d2d3423407 Disposing:True
+2016-05-13 00:14:20.9127 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: f6814029-a010-422a-9462-d9394c421130
+2016-05-13 00:14:23.8010 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 8839c84f-41e1-4d91-8c8f-809de69ebe3e
+2016-05-13 00:14:23.8210 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 7a4144e4-fdfc-477f-b86f-c0a888b8d4a1
+2016-05-13 00:14:23.8505 | DEBUG |                                      DAL.UOW..ctor | InstanceId: ce887023-e014-42ca-8fc0-a9a9c6aee1b7
+2016-05-13 00:14:23.8696 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 4873699d-bee8-4290-8f87-7e200eee0f5e
+2016-05-13 00:14:23.8856 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 4ef1e62e-61e5-4ac3-aa77-71b282fd3235
+2016-05-13 00:14:23.9136 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 607c2b61-f356-47bf-b19e-81818a4f5b27 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:23.9296 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:23 +03:00
+2016-05-13 00:14:23.9456 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @p0
+2016-05-13 00:14:23.9646 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:23.9776 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '3' (Type = Int32)
+2016-05-13 00:14:23.9936 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:23 +03:00
+2016-05-13 00:14:24.0096 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: SqlDataReader
+2016-05-13 00:14:24.0256 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:24.0456 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.0632 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 703d9ff9-2538-4b4e-9951-255773084477 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:14:24.0632 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.1017 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 00:14:24.1177 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:24.1337 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.1547 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: SqlDataReader
+2016-05-13 00:14:24.1694 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:24.1854 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.2014 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.2174 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseLeaderId] AS [CruiseLeaderId], 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[CruiseLeader] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @EntityKeyValue1
+2016-05-13 00:14:24.2334 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:24.2494 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '3' (Type = Int32, IsNullable = false)
+2016-05-13 00:14:24.2659 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.2860 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: SqlDataReader
+2016-05-13 00:14:24.3019 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:24.3179 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:24 +03:00
+2016-05-13 00:14:24.3545 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 4873699d-bee8-4290-8f87-7e200eee0f5e
+2016-05-13 00:14:24.3700 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 8839c84f-41e1-4d91-8c8f-809de69ebe3e
+2016-05-13 00:14:24.3860 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 7a4144e4-fdfc-477f-b86f-c0a888b8d4a1
+2016-05-13 00:14:24.3980 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: ce887023-e014-42ca-8fc0-a9a9c6aee1b7 Disposing:True
+2016-05-13 00:14:24.4140 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 4873699d-bee8-4290-8f87-7e200eee0f5e
+2016-05-13 00:14:27.9013 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 8fcc95a2-d132-4011-9f3a-3c61a7353f69
+2016-05-13 00:14:27.9238 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 8c98e4da-e739-49bb-9300-3fe61c3a6dbf
+2016-05-13 00:14:27.9494 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 718391a2-9dfe-4d72-8149-5407344d532e
+2016-05-13 00:14:27.9733 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 61e56ef8-ce58-4237-8726-5718ee50a8e3
+2016-05-13 00:14:27.9893 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: a70c9cd9-9322-44dc-9980-e19ea7365a48
+2016-05-13 00:14:28.0249 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 216cb997-276e-471d-bc5f-305eda71900d dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:28.0454 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.0654 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Started transaction at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.0894 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+UPDATE [dbo].[Cruise]
+SET [CruiseName] = @0
+WHERE ([CruiseId] = @1)
+2016-05-13 00:14:28.1094 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @0: 'test' (Type = String, Size = 64)
+2016-05-13 00:14:28.1294 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @1: '3' (Type = Int32)
+2016-05-13 00:14:28.1455 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.1655 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: 1
+2016-05-13 00:14:28.1815 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:28.2095 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Committed transaction at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.2280 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.2455 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 61e56ef8-ce58-4237-8726-5718ee50a8e3
+2016-05-13 00:14:28.2655 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 8fcc95a2-d132-4011-9f3a-3c61a7353f69
+2016-05-13 00:14:28.2815 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 8c98e4da-e739-49bb-9300-3fe61c3a6dbf
+2016-05-13 00:14:28.2975 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 718391a2-9dfe-4d72-8149-5407344d532e Disposing:True
+2016-05-13 00:14:28.3151 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 61e56ef8-ce58-4237-8726-5718ee50a8e3
+2016-05-13 00:14:28.3536 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 30a053a0-4387-4b58-9831-40016be69f25
+2016-05-13 00:14:28.3776 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: dfe6a7ae-fb94-4a3b-9228-8d85d092b983
+2016-05-13 00:14:28.3776 | DEBUG |                                      DAL.UOW..ctor | InstanceId: a595e935-2b00-4ff9-8a11-5015d823524a
+2016-05-13 00:14:28.4016 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 91d79636-f47d-42b6-a926-5399ecbc7eb4
+2016-05-13 00:14:28.4211 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 853767fc-0a9f-413b-acd6-746080f614ea
+2016-05-13 00:14:28.4417 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 8bbafe01-7625-4482-993d-ddd43c983d2e dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:28.4657 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.4817 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+2016-05-13 00:14:28.4977 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:28.5162 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.5162 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 0 ms with result: SqlDataReader
+2016-05-13 00:14:28.5377 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:28.5577 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:28 +03:00
+2016-05-13 00:14:28.5937 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 91d79636-f47d-42b6-a926-5399ecbc7eb4
+2016-05-13 00:14:28.6097 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 30a053a0-4387-4b58-9831-40016be69f25
+2016-05-13 00:14:28.6293 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: dfe6a7ae-fb94-4a3b-9228-8d85d092b983
+2016-05-13 00:14:28.6454 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: a595e935-2b00-4ff9-8a11-5015d823524a Disposing:True
+2016-05-13 00:14:28.6614 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 91d79636-f47d-42b6-a926-5399ecbc7eb4
+2016-05-13 00:14:33.6709 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: ed0376c8-c116-4b68-a2a1-8ee73002ceaf
+2016-05-13 00:14:33.6909 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 12a93431-9224-48d3-a566-3c81f890e5c8
+2016-05-13 00:14:33.7109 | DEBUG |                                      DAL.UOW..ctor | InstanceId: cc16a722-2f1e-4ce6-a2ca-8fc4baa42194
+2016-05-13 00:14:33.7350 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: cfb1e959-84ba-4ab5-99c4-f050f2582871
+2016-05-13 00:14:33.7550 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 60e444eb-a039-4439-b8fe-0a4109623586
+2016-05-13 00:14:33.7830 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: f3f42238-bdf8-4694-bcad-a4b64460e141 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:14:33.8030 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:33 +03:00
+2016-05-13 00:14:33.8270 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @p0
+2016-05-13 00:14:33.8470 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:33.8670 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 00:14:33.8670 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:33 +03:00
+2016-05-13 00:14:33.8910 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 4 ms with result: SqlDataReader
+2016-05-13 00:14:33.9110 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:33.9346 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:33 +03:00
+2016-05-13 00:14:47.3467 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: cfb1e959-84ba-4ab5-99c4-f050f2582871
+2016-05-13 00:14:47.3648 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: ed0376c8-c116-4b68-a2a1-8ee73002ceaf
+2016-05-13 00:14:47.3648 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 12a93431-9224-48d3-a566-3c81f890e5c8
+2016-05-13 00:14:47.3833 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: cc16a722-2f1e-4ce6-a2ca-8fc4baa42194 Disposing:True
+2016-05-13 00:14:47.3993 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: cfb1e959-84ba-4ab5-99c4-f050f2582871
+2016-05-13 00:14:54.7336 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 11f1ed59-6f5e-4102-93c3-71c2daf1472f
+2016-05-13 00:14:54.7616 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 85df7055-4dee-4dff-8d0e-95af80365d30
+2016-05-13 00:14:54.7976 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 8f35bfa6-03ab-46be-9c67-6d4d2b5fb150
+2016-05-13 00:14:54.8216 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: acf1a98b-f0c5-4482-b25c-cad5b69ebc7a
+2016-05-13 00:14:54.8216 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 162defa8-feaa-4686-9577-2eff7a9b4f5c
+2016-05-13 00:14:54.8697 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: f19ab452-4cb8-4618-ad8a-6cdb5480a1e5 dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 00:14:54.8937 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:14:54 +03:00
+2016-05-13 00:14:54.9733 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+2016-05-13 00:14:54.9933 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:55.0188 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:14:55 +03:00
+2016-05-13 00:14:55.0419 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 7 ms with result: SqlDataReader
+2016-05-13 00:14:55.0619 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:14:55.0899 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:14:55 +03:00
+2016-05-13 00:15:00.8926 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: acf1a98b-f0c5-4482-b25c-cad5b69ebc7a
+2016-05-13 00:15:00.9126 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 11f1ed59-6f5e-4102-93c3-71c2daf1472f
+2016-05-13 00:15:00.9331 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 85df7055-4dee-4dff-8d0e-95af80365d30
+2016-05-13 00:15:00.9527 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 8f35bfa6-03ab-46be-9c67-6d4d2b5fb150 Disposing:True
+2016-05-13 00:15:00.9687 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: acf1a98b-f0c5-4482-b25c-cad5b69ebc7a
+2016-05-13 00:15:10.4166 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 42a19416-0d80-4abe-8843-56f597319289
+2016-05-13 00:15:10.4366 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 63a77a32-930d-46a2-82cb-94162f38321e
+2016-05-13 00:15:10.4626 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 83c63ca9-a67b-4fc9-9fc1-09288d485038
+2016-05-13 00:15:10.4797 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 7460655d-e000-4fb3-80d1-19dfac10e7bc
+2016-05-13 00:15:10.4997 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: bb44c1c1-0bbd-4616-ac0a-a42888fe23dc
+2016-05-13 00:15:10.5237 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: b147df07-718c-4a78-87a4-a61932131bb2 dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:15:10.5437 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:15:10 +03:00
+2016-05-13 00:15:10.5667 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+2016-05-13 00:15:10.5877 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:10.6077 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:15:10 +03:00
+2016-05-13 00:15:10.6237 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 00:15:10.6437 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:10.6647 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:15:10 +03:00
+2016-05-13 00:15:10.7038 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7460655d-e000-4fb3-80d1-19dfac10e7bc
+2016-05-13 00:15:10.7198 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 42a19416-0d80-4abe-8843-56f597319289
+2016-05-13 00:15:10.7358 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 63a77a32-930d-46a2-82cb-94162f38321e
+2016-05-13 00:15:10.7558 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 83c63ca9-a67b-4fc9-9fc1-09288d485038 Disposing:True
+2016-05-13 00:15:10.7758 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7460655d-e000-4fb3-80d1-19dfac10e7bc
+2016-05-13 00:15:14.6765 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: b2b0c7b7-f0a8-4044-bb5b-99f24f77e6ce
+2016-05-13 00:15:14.6965 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: b896b020-0c6a-4278-8b2a-539639a939f0
+2016-05-13 00:15:14.7165 | DEBUG |                                      DAL.UOW..ctor | InstanceId: fa1dbd10-c975-4144-bcd2-60b33dac7875
+2016-05-13 00:15:14.7325 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: d6a7cda7-ba91-45b5-a9e4-bc11ba048c67
+2016-05-13 00:15:14.7501 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: f2a604ec-216d-4e32-8050-37fc52add69d
+2016-05-13 00:15:14.7785 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 11895b73-c41d-441b-a209-bce27a17c7ab dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:15:14.7945 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:15:14 +03:00
+2016-05-13 00:15:14.8145 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+    WHERE [Extent1].[CruiseId] = @p0
+2016-05-13 00:15:14.8305 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:14.8501 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '3' (Type = Int32)
+2016-05-13 00:15:14.8666 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:15:14 +03:00
+2016-05-13 00:15:14.8666 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 0 ms with result: SqlDataReader
+2016-05-13 00:15:14.8866 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:14.9106 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:15:14 +03:00
+2016-05-13 00:15:19.6877 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 09e73261-c9e3-4f92-bd89-d17959b2017a
+2016-05-13 00:15:19.7077 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: ea5be4ed-663f-49b0-91b3-65679c3bd856
+2016-05-13 00:15:19.7343 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 30f5917d-3021-4038-b187-3328f067fa20
+2016-05-13 00:15:19.7408 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 4010cde3-7f01-472f-af79-49c69a6127d9
+2016-05-13 00:15:19.7638 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 943d9c95-af7f-4841-a74b-08faef0ca900
+2016-05-13 00:15:19.8919 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: a73d7665-d568-4264-89c7-65503808811e dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:15:19.9559 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:19 AM +03:00
+2016-05-13 00:15:20.0274 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[Person] AS [Extent1]
+        WHERE [Extent1].[UserId] = @p__linq__0
+    )  AS [GroupBy1]
+2016-05-13 00:15:20.0549 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:20.0839 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:20.1124 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:20 AM +03:00
+2016-05-13 00:15:20.1684 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 29 ms with result: SqlDataReader
+2016-05-13 00:15:20.1874 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:20.2074 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:20 AM +03:00
+2016-05-13 00:15:20.2284 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:20 AM +03:00
+2016-05-13 00:15:20.2984 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Project1].[PersonId] AS [PersonId], 
+    [Project1].[Firstname] AS [Firstname], 
+    [Project1].[Lastname] AS [Lastname], 
+    [Project1].[UserId] AS [UserId], 
+    [Project1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Project1].[CreatedBy] AS [CreatedBy], 
+    [Project1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Project1].[ModifiedBy] AS [ModifiedBy]
+    FROM ( SELECT 
+        [Extent1].[PersonId] AS [PersonId], 
+        [Extent1].[Firstname] AS [Firstname], 
+        [Extent1].[Lastname] AS [Lastname], 
+        [Extent1].[UserId] AS [UserId], 
+        [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+        [Extent1].[CreatedBy] AS [CreatedBy], 
+        [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+        [Extent1].[ModifiedBy] AS [ModifiedBy]
+        FROM [dbo].[Person] AS [Extent1]
+        WHERE [Extent1].[UserId] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[Lastname] ASC, [Project1].[Firstname] ASC
+    OFFSET 0 ROWS FETCH NEXT 25 ROWS ONLY
+2016-05-13 00:15:20.3199 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:20.3664 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:20.3889 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:20 AM +03:00
+2016-05-13 00:15:20.4359 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 20 ms with result: SqlDataReader
+2016-05-13 00:15:20.4564 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:20.4819 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:20 AM +03:00
+2016-05-13 00:15:28.1342 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: d6a7cda7-ba91-45b5-a9e4-bc11ba048c67
+2016-05-13 00:15:28.1542 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: b2b0c7b7-f0a8-4044-bb5b-99f24f77e6ce
+2016-05-13 00:15:28.1788 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: b896b020-0c6a-4278-8b2a-539639a939f0
+2016-05-13 00:15:28.1988 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: fa1dbd10-c975-4144-bcd2-60b33dac7875 Disposing:True
+2016-05-13 00:15:28.2228 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: d6a7cda7-ba91-45b5-a9e4-bc11ba048c67
+2016-05-13 00:15:33.6329 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 4010cde3-7f01-472f-af79-49c69a6127d9
+2016-05-13 00:15:33.6488 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 09e73261-c9e3-4f92-bd89-d17959b2017a
+2016-05-13 00:15:33.6679 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: ea5be4ed-663f-49b0-91b3-65679c3bd856
+2016-05-13 00:15:33.6854 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 30f5917d-3021-4038-b187-3328f067fa20 Disposing:True
+2016-05-13 00:15:33.7014 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 4010cde3-7f01-472f-af79-49c69a6127d9
+2016-05-13 00:15:41.6561 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 344f26a9-408d-481f-86ef-a008e618ef99
+2016-05-13 00:15:41.6801 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 9f22e366-f7dd-49b1-91ea-39bcf109917a
+2016-05-13 00:15:41.7081 | DEBUG |                                      DAL.UOW..ctor | InstanceId: c24ac05e-2bdd-41e3-9a04-44f232ffc56d
+2016-05-13 00:15:41.7286 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: a12abde9-efd3-4c59-9805-08abc5039a3f
+2016-05-13 00:15:41.7481 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 55f66aad-fb62-47b1-8ae0-42b8a5d3fa3d
+2016-05-13 00:15:41.7761 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 99942d03-bc1d-4721-b679-62af9fee8339 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:15:41.8081 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:41 AM +03:00
+2016-05-13 00:15:41.8602 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (1) 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+    WHERE ([Extent1].[PersonId] = @p__linq__0) AND ([Extent1].[UserId] = @p__linq__1)
+2016-05-13 00:15:41.8922 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:41.9232 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:41.9232 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:41.9542 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:41 AM +03:00
+2016-05-13 00:15:41.9801 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 7 ms with result: SqlDataReader
+2016-05-13 00:15:41.9961 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:42.0161 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:42 AM +03:00
+2016-05-13 00:15:42.1319 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: a12abde9-efd3-4c59-9805-08abc5039a3f
+2016-05-13 00:15:42.1519 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 344f26a9-408d-481f-86ef-a008e618ef99
+2016-05-13 00:15:42.1724 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 9f22e366-f7dd-49b1-91ea-39bcf109917a
+2016-05-13 00:15:42.1925 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: c24ac05e-2bdd-41e3-9a04-44f232ffc56d Disposing:True
+2016-05-13 00:15:42.2085 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: a12abde9-efd3-4c59-9805-08abc5039a3f
+2016-05-13 00:15:49.0033 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: e3376f7e-d8d0-4cca-b4ee-6735a3cfa018
+2016-05-13 00:15:49.0273 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: d6a56723-f9e6-4a9c-8efa-a169e1270173
+2016-05-13 00:15:49.0513 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 11d83463-1475-41d5-a0d1-dbf84b9e8f0e
+2016-05-13 00:15:49.0713 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 7d64aa1e-9457-4b90-af9e-5d49e2e0ad72
+2016-05-13 00:15:49.0913 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 87f9f940-763c-4dc3-b4da-2ea96fae3524
+2016-05-13 00:15:49.1314 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: fcf486db-639c-4c79-93e3-8b488c7cd788 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:15:49.2314 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.2514 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Started transaction at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.2951 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+UPDATE [dbo].[Person]
+SET [Firstname] = @0, [Lastname] = @1, [UserId] = @2, [CreatedAtDT] = @3, [CreatedBy] = NULL, [ModifiedAtDT] = @4, [ModifiedBy] = @5
+WHERE ([PersonId] = @6)
+2016-05-13 00:15:49.3111 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @0: 'Germo' (Type = String, Size = 255)
+2016-05-13 00:15:49.3271 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @1: 'Väli' (Type = String, Size = 255)
+2016-05-13 00:15:49.3431 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @2: '1' (Type = Int32)
+2016-05-13 00:15:49.3591 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @3: '1/1/0001 12:00:00 AM' (Type = DateTime2)
+2016-05-13 00:15:49.3751 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @4: '5/13/2016 12:15:49 AM' (Type = DateTime2)
+2016-05-13 00:15:49.3912 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @5: '1@eesti.ee' (Type = String, Size = 256)
+2016-05-13 00:15:49.4114 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- @6: '1' (Type = Int32)
+2016-05-13 00:15:49.4274 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.4754 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 32 ms with result: 1
+2016-05-13 00:15:49.4919 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:49.5120 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Committed transaction at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.5240 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.5440 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7d64aa1e-9457-4b90-af9e-5d49e2e0ad72
+2016-05-13 00:15:49.5640 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: e3376f7e-d8d0-4cca-b4ee-6735a3cfa018
+2016-05-13 00:15:49.5865 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: d6a56723-f9e6-4a9c-8efa-a169e1270173
+2016-05-13 00:15:49.6040 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 11d83463-1475-41d5-a0d1-dbf84b9e8f0e Disposing:True
+2016-05-13 00:15:49.6200 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7d64aa1e-9457-4b90-af9e-5d49e2e0ad72
+2016-05-13 00:15:49.6640 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 2a164275-cc18-41e1-af7d-a6f75978e4c9
+2016-05-13 00:15:49.6871 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: dac67c38-b1a9-4056-8a78-d9653d85136c
+2016-05-13 00:15:49.7081 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 01dc3036-2233-4790-930e-738d99ce01f4
+2016-05-13 00:15:49.7241 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 3d505bd6-5553-4934-b24f-78a711f0fa16
+2016-05-13 00:15:49.7441 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 1877afa9-b35d-4b3f-a223-cb6b574ffbaa
+2016-05-13 00:15:49.7721 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: de8fae4c-708f-43c1-8762-0d219518e7b9 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 00:15:49.8002 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.8242 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[Person] AS [Extent1]
+        WHERE [Extent1].[UserId] = @p__linq__0
+    )  AS [GroupBy1]
+2016-05-13 00:15:49.8402 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:49.8642 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:49.8817 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.9042 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 00:15:49.9242 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:49.9442 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.9642 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 5/13/2016 12:15:49 AM +03:00
+2016-05-13 00:15:49.9918 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Project1].[PersonId] AS [PersonId], 
+    [Project1].[Firstname] AS [Firstname], 
+    [Project1].[Lastname] AS [Lastname], 
+    [Project1].[UserId] AS [UserId], 
+    [Project1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Project1].[CreatedBy] AS [CreatedBy], 
+    [Project1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Project1].[ModifiedBy] AS [ModifiedBy]
+    FROM ( SELECT 
+        [Extent1].[PersonId] AS [PersonId], 
+        [Extent1].[Firstname] AS [Firstname], 
+        [Extent1].[Lastname] AS [Lastname], 
+        [Extent1].[UserId] AS [UserId], 
+        [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+        [Extent1].[CreatedBy] AS [CreatedBy], 
+        [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+        [Extent1].[ModifiedBy] AS [ModifiedBy]
+        FROM [dbo].[Person] AS [Extent1]
+        WHERE [Extent1].[UserId] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[Lastname] ASC, [Project1].[Firstname] ASC
+    OFFSET 0 ROWS FETCH NEXT 25 ROWS ONLY
+2016-05-13 00:15:50.0118 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:50.0333 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: '1' (Type = Int32, IsNullable = false)
+2016-05-13 00:15:50.0553 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 5/13/2016 12:15:50 AM +03:00
+2016-05-13 00:15:50.0773 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 00:15:50.0978 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:15:50.1178 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 5/13/2016 12:15:50 AM +03:00
+2016-05-13 00:15:50.1658 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 3d505bd6-5553-4934-b24f-78a711f0fa16
+2016-05-13 00:15:50.1863 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 2a164275-cc18-41e1-af7d-a6f75978e4c9
+2016-05-13 00:15:50.2033 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: dac67c38-b1a9-4056-8a78-d9653d85136c
+2016-05-13 00:15:50.2253 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 01dc3036-2233-4790-930e-738d99ce01f4 Disposing:True
+2016-05-13 00:15:50.2488 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 3d505bd6-5553-4934-b24f-78a711f0fa16
+2016-05-13 00:16:04.7545 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: a7944a8e-cad4-46ce-a2d7-bb9966085d35
+2016-05-13 00:16:04.7785 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 2445747d-a2ee-479d-8f71-fda56b916401
+2016-05-13 00:16:04.8035 | DEBUG |                                      DAL.UOW..ctor | InstanceId: ccc97896-4be9-4686-aeb3-00ee97756c21
+2016-05-13 00:16:04.8235 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: aa77ab00-db1c-41ac-b2cb-a03e91db990f
+2016-05-13 00:16:04.8435 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: b534c734-62b6-4fc6-889d-45d77f30bffe
+2016-05-13 00:16:04.8675 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 1187ff73-d170-47c1-857e-29b0afeeb68b dbSet: System.Data.Entity.DbSet`1[Domain.Cruise]
+2016-05-13 00:16:04.8891 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:16:04 +03:00
+2016-05-13 00:16:04.9036 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[CruiseId] AS [CruiseId], 
+    [Extent1].[CruiseName] AS [CruiseName]
+    FROM [dbo].[Cruise] AS [Extent1]
+2016-05-13 00:16:04.9196 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:16:04.9356 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:16:04 +03:00
+2016-05-13 00:16:04.9556 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 3 ms with result: SqlDataReader
+2016-05-13 00:16:04.9716 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:16:04.9957 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:16:04 +03:00
+2016-05-13 00:16:05.0317 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: aa77ab00-db1c-41ac-b2cb-a03e91db990f
+2016-05-13 00:16:05.0517 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: a7944a8e-cad4-46ce-a2d7-bb9966085d35
+2016-05-13 00:16:05.0677 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 2445747d-a2ee-479d-8f71-fda56b916401
+2016-05-13 00:16:05.0927 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: ccc97896-4be9-4686-aeb3-00ee97756c21 Disposing:True
+2016-05-13 00:16:05.0957 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: aa77ab00-db1c-41ac-b2cb-a03e91db990f
+2016-05-13 00:16:07.6652 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 6f20f619-f72d-4a4b-a04f-985bc0c34346
+2016-05-13 00:16:07.6893 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 44e88b27-2b19-4edb-b56b-3f2b259c7a84
+2016-05-13 00:16:07.7158 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 7cad5c0e-0ef4-45a8-805f-a22197abdd0b
+2016-05-13 00:16:07.7398 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 7c4e1230-e689-489a-8e68-93862f3088f8
+2016-05-13 00:16:07.7598 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 7bfe5464-a7f8-4a2e-a241-37586c54e483
+2016-05-13 00:16:07.7878 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: a389210f-00eb-4e43-82a9-2a7b348c7635 dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 00:16:07.8119 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 0:16:07 +03:00
+2016-05-13 00:16:07.8319 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+2016-05-13 00:16:07.8519 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:16:07.8719 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 0:16:07 +03:00
+2016-05-13 00:16:07.8964 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: SqlDataReader
+2016-05-13 00:16:07.9159 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 00:16:07.9359 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 0:16:07 +03:00
+2016-05-13 00:16:07.9919 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7c4e1230-e689-489a-8e68-93862f3088f8
+2016-05-13 00:16:08.0160 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 6f20f619-f72d-4a4b-a04f-985bc0c34346
+2016-05-13 00:16:08.0320 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 44e88b27-2b19-4edb-b56b-3f2b259c7a84
+2016-05-13 00:16:08.0520 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 7cad5c0e-0ef4-45a8-805f-a22197abdd0b Disposing:True
+2016-05-13 00:16:08.0720 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7c4e1230-e689-489a-8e68-93862f3088f8
+2016-05-13 14:26:26.7348 | DEBUG |            DAL.Helpers.EFRepositoryFactories..ctor | InstanceId: 2a24595f-20d6-485f-8925-9fbfc8eb30b8
+2016-05-13 14:26:26.7848 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 2fa80f14-8acd-4070-b121-76ca325d05d6
+2016-05-13 14:26:26.7848 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 8fb57d31-a79c-48c7-bcc7-9fa63ddb51f2
+2016-05-13 14:26:27.1154 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: d7cde2eb-8158-4ebc-8bdb-aa52bbdf4962
+2016-05-13 14:26:27.1154 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: c73af6c2-0312-48aa-907c-5266b5d6161d
+2016-05-13 14:26:27.1359 | DEBUG |                                      DAL.UOW..ctor | InstanceId: ff561899-1d94-4fb7-856c-37167294100e
+2016-05-13 14:26:27.1359 | DEBUG |                                      DAL.UOW..ctor | InstanceId: f4d53de3-ac75-4f7e-8393-7725fe68139a
+2016-05-13 14:26:27.1459 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 8844e5d4-064c-4c5e-b59e-2f3f671ae44e
+2016-05-13 14:26:27.1459 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: f8e7121c-36ac-425d-afe8-6b3852d03a60
+2016-05-13 14:26:27.1744 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 138d71c8-47ee-476a-b11c-d39d217c89c8
+2016-05-13 14:26:27.1689 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 0e9a9f31-4d0d-4bd1-b307-25fe6431f268
+2016-05-13 14:26:27.7339 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 4d5c6884-aa59-4bba-879f-aea16d38b3ce dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:26:27.7670 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: f8e7121c-36ac-425d-afe8-6b3852d03a60
+2016-05-13 14:26:27.7970 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 2fa80f14-8acd-4070-b121-76ca325d05d6
+2016-05-13 14:26:27.8050 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: d7cde2eb-8158-4ebc-8bdb-aa52bbdf4962
+2016-05-13 14:26:27.8140 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: ff561899-1d94-4fb7-856c-37167294100e Disposing:True
+2016-05-13 14:26:27.8140 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: f8e7121c-36ac-425d-afe8-6b3852d03a60
+2016-05-13 14:26:34.2424 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:26:34 +03:00
+2016-05-13 14:26:34.2569 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Article','dbo.MultiLangString','dbo.Translation','dbo.Contact','dbo.ContactType','dbo.Person','dbo.CruiseLeader','dbo.Cruise','dbo.CruisePerson','dbo.CruiseStation','dbo.Station','dbo.ProjectLeader','dbo.Project','dbo.ProjectPerson','dbo.UserInt','dbo.UserClaimInt','dbo.UserLoginInt','dbo.UserRoleInt','dbo.RoleInt','dbo.StationMeasurement','dbo.Measurement')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2016-05-13 14:26:34.2734 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:34.2974 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:26:34 +03:00
+2016-05-13 14:26:34.4415 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 121 ms with result: 21
+2016-05-13 14:26:34.4545 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:34.4756 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:26:34 +03:00
+2016-05-13 14:26:35.5156 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:26:35 +03:00
+2016-05-13 14:26:39.7859 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2016-05-13 14:26:39.8694 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:39.9364 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 14:26:39.9974 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:26:39 +03:00
+2016-05-13 14:26:40.2314 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 178 ms with result: SqlDataReader
+2016-05-13 14:26:40.2549 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:40.3429 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:26:40 +03:00
+2016-05-13 14:26:40.4579 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:26:40 +03:00
+2016-05-13 14:26:40.7272 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2016-05-13 14:26:40.7392 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:40.7572 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 14:26:40.7692 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:26:40 +03:00
+2016-05-13 14:26:40.7942 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 8 ms with result: SqlDataReader
+2016-05-13 14:26:40.8072 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:40.8543 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:26:40 +03:00
+2016-05-13 14:26:41.0131 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:26:41 +03:00
+2016-05-13 14:26:41.4880 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+2016-05-13 14:26:41.4880 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:41.5130 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:26:41 +03:00
+2016-05-13 14:26:41.5321 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 7 ms with result: SqlDataReader
+2016-05-13 14:26:41.5321 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:26:41.6701 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:26:41 +03:00
+2016-05-13 14:27:14.4877 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 8844e5d4-064c-4c5e-b59e-2f3f671ae44e
+2016-05-13 14:27:14.5138 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 8fb57d31-a79c-48c7-bcc7-9fa63ddb51f2
+2016-05-13 14:27:14.5428 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: c73af6c2-0312-48aa-907c-5266b5d6161d
+2016-05-13 14:27:14.5718 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: f4d53de3-ac75-4f7e-8393-7725fe68139a Disposing:True
+2016-05-13 14:27:14.5718 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 8844e5d4-064c-4c5e-b59e-2f3f671ae44e
+2016-05-13 14:27:43.4689 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: efede35f-7e79-4eaa-b49a-4e88bf0fedc9
+2016-05-13 14:27:43.4889 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 0fcd0b92-15d4-4285-ae43-8a8b117533f0
+2016-05-13 14:27:43.5009 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 7c4fc74e-3800-4761-bc48-a0eae7399072
+2016-05-13 14:27:43.5260 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 7e222174-f2c7-45a4-b994-942118f199c4
+2016-05-13 14:27:43.5470 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: c5cfcc22-ea2e-40e6-913b-2dc3687d0bf3
+2016-05-13 14:27:43.6380 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: c2478589-b08e-4f98-9c31-5142fcb38988 dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:27:43.7561 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:27:43 +03:00
+2016-05-13 14:27:43.9092 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @p0
+2016-05-13 14:27:43.9262 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:43.9512 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 14:27:43.9692 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:27:43 +03:00
+2016-05-13 14:27:43.9963 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 5 ms with result: SqlDataReader
+2016-05-13 14:27:44.0128 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:44.0323 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.0553 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: b1db996d-18a4-4cec-92e8-0c4a95cd2c14 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 14:27:44.0773 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.2024 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 14:27:44.2224 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:44.2224 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.2604 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 17 ms with result: SqlDataReader
+2016-05-13 14:27:44.2794 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:44.4215 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.5126 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.5856 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectLeaderId] AS [ProjectLeaderId], 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[ProjectLeader] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @EntityKeyValue1
+2016-05-13 14:27:44.6006 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:44.6186 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 14:27:44.6387 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:27:44.7056 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 49 ms with result: SqlDataReader
+2016-05-13 14:27:44.7217 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:27:44.7467 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:27:44 +03:00
+2016-05-13 14:28:03.6484 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7e222174-f2c7-45a4-b994-942118f199c4
+2016-05-13 14:28:03.6704 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: efede35f-7e79-4eaa-b49a-4e88bf0fedc9
+2016-05-13 14:28:03.6874 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 0fcd0b92-15d4-4285-ae43-8a8b117533f0
+2016-05-13 14:28:03.7074 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 7c4fc74e-3800-4761-bc48-a0eae7399072 Disposing:True
+2016-05-13 14:28:03.7224 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 7e222174-f2c7-45a4-b994-942118f199c4
+2016-05-13 14:28:19.3008 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: da8bbafb-0a81-42f3-9c81-7e32d3144108
+2016-05-13 14:28:19.3308 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 70a29d46-f62f-41ef-a3b3-7e1164d8e7e0
+2016-05-13 14:28:19.3603 | DEBUG |                                      DAL.UOW..ctor | InstanceId: bd082063-a7b6-4325-bd0d-fc0596bf8ba0
+2016-05-13 14:28:19.3803 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 340b47e6-7a8d-4e12-8307-46425dd98e66
+2016-05-13 14:28:19.3993 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 93891dcd-1a2d-42ff-93cd-4e2e996538e2
+2016-05-13 14:28:19.4203 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 924847c8-8d2e-4a48-8fbb-cc77107fa86d dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:28:19.4413 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:28:19 +03:00
+2016-05-13 14:28:19.4634 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+2016-05-13 14:28:19.4794 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:19.4994 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:28:19 +03:00
+2016-05-13 14:28:19.5194 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 14:28:19.5354 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:19.5594 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:28:19 +03:00
+2016-05-13 14:28:19.6145 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 340b47e6-7a8d-4e12-8307-46425dd98e66
+2016-05-13 14:28:19.6294 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: da8bbafb-0a81-42f3-9c81-7e32d3144108
+2016-05-13 14:28:19.6520 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 70a29d46-f62f-41ef-a3b3-7e1164d8e7e0
+2016-05-13 14:28:19.6745 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: bd082063-a7b6-4325-bd0d-fc0596bf8ba0 Disposing:True
+2016-05-13 14:28:19.6995 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 340b47e6-7a8d-4e12-8307-46425dd98e66
+2016-05-13 14:28:24.0498 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 8bfe17d3-6919-42cc-9c26-7d9f0e160e60
+2016-05-13 14:28:24.0803 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 12a5d95b-357e-4245-b000-0d636d12f28f
+2016-05-13 14:28:24.1023 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 8a1b3569-7627-4ffe-ac95-ff2d2006baad
+2016-05-13 14:28:24.1213 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 50616f73-5f53-4746-9961-01ffcdcd28b1
+2016-05-13 14:28:24.1423 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 1f9cf81d-bf59-4f09-94f8-d49405fe6bf7
+2016-05-13 14:28:24.1683 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 3e731741-cc06-422d-ab6b-fb9a252f7d27 dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:28:24.1891 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.2161 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @p0
+2016-05-13 14:28:24.2361 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.2551 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 14:28:24.2767 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.3077 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 6 ms with result: SqlDataReader
+2016-05-13 14:28:24.3307 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.3517 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.3717 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: 8a1f1c4d-9cec-43ba-ab86-523c15771404 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 14:28:24.3898 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.4078 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 14:28:24.4258 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.4398 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.4578 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 1 ms with result: SqlDataReader
+2016-05-13 14:28:24.4578 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.4818 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.4998 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.5198 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectLeaderId] AS [ProjectLeaderId], 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[ProjectLeader] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @EntityKeyValue1
+2016-05-13 14:28:24.5198 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.5408 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 14:28:24.5588 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.5768 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 2 ms with result: SqlDataReader
+2016-05-13 14:28:24.5909 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:28:24.6079 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:28:24 +03:00
+2016-05-13 14:28:24.6319 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 50616f73-5f53-4746-9961-01ffcdcd28b1
+2016-05-13 14:28:24.6509 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 8bfe17d3-6919-42cc-9c26-7d9f0e160e60
+2016-05-13 14:28:24.6689 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 12a5d95b-357e-4245-b000-0d636d12f28f
+2016-05-13 14:28:24.6869 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 8a1b3569-7627-4ffe-ac95-ff2d2006baad Disposing:True
+2016-05-13 14:28:24.7039 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 50616f73-5f53-4746-9961-01ffcdcd28b1
+2016-05-13 14:29:41.2534 | DEBUG |          DAL.Helpers.EFRepositoryFactories.Dispose | InstanceId: 2a24595f-20d6-485f-8925-9fbfc8eb30b8
+2016-05-13 14:30:12.8951 | DEBUG |            DAL.Helpers.EFRepositoryFactories..ctor | InstanceId: ad16fdab-39a4-4e19-b024-feef6720c455
+2016-05-13 14:30:12.9321 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 3abbf9ab-9ce3-4e5f-b491-f942712d5174
+2016-05-13 14:30:13.2442 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 2ba8a305-ba1c-4fe4-a669-f00db9cb8830
+2016-05-13 14:30:13.2612 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 0c9e0f64-5e29-4b83-aba6-05f9cd921673
+2016-05-13 14:30:13.2717 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 593806c2-bcb8-48ee-b5ef-6675de4b7173
+2016-05-13 14:30:13.2882 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: 820c8ad1-35d5-41de-b2f4-6b15213bc19d
+2016-05-13 14:30:13.6312 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: ca504b08-d3dc-4f54-8f33-bf4a5cb7f984 dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:30:16.1997 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:30:16 +03:00
+2016-05-13 14:30:16.2257 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Article','dbo.MultiLangString','dbo.Translation','dbo.Contact','dbo.ContactType','dbo.Person','dbo.CruiseLeader','dbo.Cruise','dbo.CruisePerson','dbo.CruiseStation','dbo.Station','dbo.ProjectLeader','dbo.Project','dbo.ProjectPerson','dbo.UserInt','dbo.UserClaimInt','dbo.UserLoginInt','dbo.UserRoleInt','dbo.RoleInt','dbo.StationMeasurement','dbo.Measurement')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2016-05-13 14:30:16.2447 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:16.2617 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:30:16 +03:00
+2016-05-13 14:30:16.3817 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 92 ms with result: 21
+2016-05-13 14:30:16.4057 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:16.4267 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:30:16 +03:00
+2016-05-13 14:30:17.8904 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:30:17 +03:00
+2016-05-13 14:30:21.6563 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2016-05-13 14:30:21.6722 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:21.6933 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 14:30:21.7082 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:30:21 +03:00
+2016-05-13 14:30:21.7373 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 14 ms with result: SqlDataReader
+2016-05-13 14:30:21.7513 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:21.7933 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:30:21 +03:00
+2016-05-13 14:30:21.8544 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:30:21 +03:00
+2016-05-13 14:30:22.1024 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2016-05-13 14:30:22.1184 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:22.1359 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p__linq__0: 'DAL.DataBaseContext' (Type = String, Size = 4000)
+2016-05-13 14:30:22.1489 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:30:22 +03:00
+2016-05-13 14:30:22.1729 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 5 ms with result: SqlDataReader
+2016-05-13 14:30:22.1729 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:22.2124 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:30:22 +03:00
+2016-05-13 14:30:22.3619 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:30:22 +03:00
+2016-05-13 14:30:22.7379 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+2016-05-13 14:30:22.7509 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:22.7509 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:30:22 +03:00
+2016-05-13 14:30:22.7679 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 5 ms with result: SqlDataReader
+2016-05-13 14:30:22.7679 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:30:22.8739 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:30:22 +03:00
+2016-05-13 14:30:28.6033 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 593806c2-bcb8-48ee-b5ef-6675de4b7173
+2016-05-13 14:30:28.6766 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 3abbf9ab-9ce3-4e5f-b491-f942712d5174
+2016-05-13 14:30:28.6967 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 2ba8a305-ba1c-4fe4-a669-f00db9cb8830
+2016-05-13 14:30:28.7282 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 0c9e0f64-5e29-4b83-aba6-05f9cd921673 Disposing:True
+2016-05-13 14:30:28.7552 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 593806c2-bcb8-48ee-b5ef-6675de4b7173
+2016-05-13 14:31:18.4146 | DEBUG |             DAL.Helpers.EFRepositoryProvider..ctor | InstanceId: 4d128a15-1108-47cf-b12c-386ce58a49b7
+2016-05-13 14:31:18.4381 | DEBUG |                          DAL.DataBaseContext..ctor | InstanceId: 82464043-5c09-4719-9d83-54e1483a59aa
+2016-05-13 14:31:18.4681 | DEBUG |                                      DAL.UOW..ctor | InstanceId: 89ca958c-3a05-4eb6-8e17-c6a41f3736f2
+2016-05-13 14:31:18.4941 | DEBUG |                        Identity.UserStore`11..ctor | InstanceId: 6854fb94-47f6-4419-838f-c2aff9f8fa19
+2016-05-13 14:31:18.5146 | DEBUG |                   Web.ApplicationUserManager..ctor | InstanceId: b5139b9b-ac7e-490f-96fa-b9580dbbe593
+2016-05-13 14:31:18.6012 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: fed269ac-0b05-4cc6-9f77-73e0d0e1bdbb dbSet: System.Data.Entity.DbSet`1[Domain.Project]
+2016-05-13 14:31:18.7002 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:31:18 +03:00
+2016-05-13 14:31:18.8813 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT TOP (2) 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[ProjectName] AS [ProjectName]
+    FROM [dbo].[Project] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @p0
+2016-05-13 14:31:18.9003 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:18.9259 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- p0: '1' (Type = Int32)
+2016-05-13 14:31:18.9464 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:31:18 +03:00
+2016-05-13 14:31:18.9554 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 5 ms with result: SqlDataReader
+2016-05-13 14:31:18.9764 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:18.9964 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:31:18 +03:00
+2016-05-13 14:31:19.0225 | INFO |              DAL.Repositories.EFRepository`1..ctor | _instanceId: d268d373-f03d-4cf2-8ec6-b923d03554e0 dbSet: System.Data.Entity.DbSet`1[Domain.Person]
+2016-05-13 14:31:19.0455 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:19.1835 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[PersonId] AS [PersonId], 
+    [Extent1].[Firstname] AS [Firstname], 
+    [Extent1].[Lastname] AS [Lastname], 
+    [Extent1].[UserId] AS [UserId], 
+    [Extent1].[CreatedAtDT] AS [CreatedAtDT], 
+    [Extent1].[CreatedBy] AS [CreatedBy], 
+    [Extent1].[ModifiedAtDT] AS [ModifiedAtDT], 
+    [Extent1].[ModifiedBy] AS [ModifiedBy]
+    FROM [dbo].[Person] AS [Extent1]
+2016-05-13 14:31:19.2055 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:19.2261 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:19.2496 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 7 ms with result: SqlDataReader
+2016-05-13 14:31:19.2666 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:19.4272 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:19.5218 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Opened connection at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:19.6118 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+SELECT 
+    [Extent1].[ProjectLeaderId] AS [ProjectLeaderId], 
+    [Extent1].[ProjectId] AS [ProjectId], 
+    [Extent1].[PersonId] AS [PersonId]
+    FROM [dbo].[ProjectLeader] AS [Extent1]
+    WHERE [Extent1].[ProjectId] = @EntityKeyValue1
+2016-05-13 14:31:19.6324 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:19.6504 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+2016-05-13 14:31:19.6714 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Executing at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:19.7064 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | -- Completed in 16 ms with result: SqlDataReader
+2016-05-13 14:31:19.7274 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | 
+2016-05-13 14:31:19.7544 | INFO |                  DAL.DataBaseContext.<.ctor>b__3_1 | Closed connection at 13.05.2016 14:31:19 +03:00
+2016-05-13 14:31:40.7205 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 6854fb94-47f6-4419-838f-c2aff9f8fa19
+2016-05-13 14:31:40.7405 | DEBUG |           DAL.Helpers.EFRepositoryProvider.Dispose | InstanceId: 4d128a15-1108-47cf-b12c-386ce58a49b7
+2016-05-13 14:31:40.7611 | INFO |                        DAL.DataBaseContext.Dispose | Disposing: True _instanceId: 82464043-5c09-4719-9d83-54e1483a59aa
+2016-05-13 14:31:40.7831 | DEBUG |                                    DAL.UOW.Dispose | InstanceId: 89ca958c-3a05-4eb6-8e17-c6a41f3736f2 Disposing:True
+2016-05-13 14:31:40.8061 | DEBUG |                      Identity.UserStore`11.Dispose | InstanceId: 6854fb94-47f6-4419-838f-c2aff9f8fa19

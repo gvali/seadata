@@ -58,7 +58,16 @@ namespace Web.Controllers
             {
                 return HttpNotFound();
             }
-            return View(project);
+            var vm = new ProjectCreateEditViewModel()
+            {
+                Project = project,
+                LeadersMultiSelectList = new MultiSelectList(
+                    _uow.Persons.All,
+                    nameof(Person.PersonId), nameof(Person.FirstLastname),
+                    project.ProjectLeaders.Select(person => person.PersonId))
+            };
+
+            return View(vm);
         }
 
         // GET: Projects/Create
@@ -118,14 +127,14 @@ namespace Web.Controllers
                 return HttpNotFound();
             }
 
-            var vm = new ProjectCreateEditViewModel();
-            //{
-            //    Project = project,
-            //    LeadersMultiSelectList = new MultiSelectList(
-            //        _uow.Persons,
-            //        nameof(Person.PersonId), nameof(Person.FirstLastname),
-            //        project.ProjectLeaders.Select(leader => leader.PersonId))
-            //};
+            var vm = new ProjectCreateEditViewModel()
+            {
+                Project = project,
+                LeadersMultiSelectList = new MultiSelectList(
+                    _uow.Persons.All,
+                    nameof(Person.PersonId), nameof(Person.FirstLastname),
+                    project.ProjectLeaders.Select(person => person.PersonId))
+            };
 
 
             //ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "Firstname", project.PersonId);

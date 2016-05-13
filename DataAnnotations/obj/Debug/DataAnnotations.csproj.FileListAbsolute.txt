@@ -1,0 +1,12 @@
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\DataAnnotations.dll.config
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\DataAnnotations.dll
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\DataAnnotations.pdb
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.dll
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\NLog.dll
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.xml
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\NLog.xml
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.csprojResolveAssemblyReference.cache
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.dll
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.pdb

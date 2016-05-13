@@ -3,42 +3,26 @@
 @model Web.ViewModels.ProjectCreateEditViewModel
 
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
-    <div>
-        <h4>Project</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.ProjectLeader.Firstname)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.ProjectLeader.Firstname)
-            </dd>
-    
-            <dt>
-                @Html.DisplayNameFor(model => model.ProjectName)
-            </dt>
-    
-            <dd>
-                @Html.DisplayFor(model => model.ProjectName)
-            </dd>
-    
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ProjectId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</body>
-</html>
+<h2>Details</h2>
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Project.ProjectName)
+        </dd>
+
+    </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Project.ProjectId }) |    
+    @Html.ActionLink("Back to List", "Index")
+</p>

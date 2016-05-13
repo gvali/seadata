@@ -80,7 +80,7 @@ namespace Web.Controllers
             {
 
                 _uow.Cruises.Add(vm.Cruise);
-
+            
                 foreach (var personId in vm.LeaderIds)
                 {
                     _uow.CruiseLeaders.Add(new CruiseLeader()
@@ -92,8 +92,8 @@ namespace Web.Controllers
                 _uow.Commit();
                 return RedirectToAction(nameof(Index));
 
-                vm.LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId),
-                    nameof(Person.FirstLastname), vm.LeaderIds);
+                //vm.LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId),
+                //    nameof(Person.FirstLastname), vm.LeaderIds);
 
                 //db.Cruises.Add(cruise);
                 //db.SaveChanges();
@@ -110,12 +110,21 @@ namespace Web.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Cruise cruise = db.Cruises.Find(id);
-            Cruise cruise = _uow.Cruises.GetById(id);
+            var cruise = _uow.Cruises.GetById(id);
             if (cruise == null)
             {
                 return HttpNotFound();
             }
-            var vm = new CruiseCreateEditViewModel();
+            var vm = new CruiseCreateEditViewModel()
+            {
+                Cruise = cruise,
+                //LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
+                LeadersMultiSelectList = new MultiSelectList(
+                    _uow.Persons.All,
+                    nameof(Person.PersonId),nameof(Person.FirstLastname),
+                    cruise.CruiseLeaders.Select(person => person.PersonId)
+                    )
+            };
 
             return View(vm);
         }
