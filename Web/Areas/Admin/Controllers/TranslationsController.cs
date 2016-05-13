@@ -35,7 +35,6 @@ namespace Web.Areas.Admin.Controllers
         {
             var vm = new TranslationsIndexViewModel()
             {
-                //TODO: .Include(t => t.MultiLangString),
                 Translations = _uow.Translations.All.OrderBy(a => a.MultiLangStringId).ToList(),
                 ViewHtml = viewHtml
             };

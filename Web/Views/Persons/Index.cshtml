@@ -78,25 +78,33 @@
                 @Html.DisplayFor(modelItem => item.Lastname)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.DateTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Time)
-            </td>
-            <td>
-                @item.Contacts.Count
-            </td>*@
-@if (Request.IsAuthenticated)
-{
-    <td>
-        @Html.ActionLink("Edit", "Edit", new {id = item.PersonId}) |
-        @Html.ActionLink("Details", "Details", new {id = item.PersonId}) |
-        @Html.ActionLink("Delete", "Delete", new {id = item.PersonId})
-    </td>
-}
+                    @Html.DisplayFor(modelItem => item.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @item.Contacts.Count
+                </td>*@
+            @if (Request.IsAuthenticated)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonCode)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PersonId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PersonId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PersonId })
+                </td>
+            }
         </tr>
     }
 

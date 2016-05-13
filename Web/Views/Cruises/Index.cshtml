@@ -27,6 +27,10 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Cruises.FirstOrDefault().CruiseName)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cruises.FirstOrDefault().CruiseLeaders)
+                </th>
+
                 <th></th>
             </tr>
 
@@ -39,6 +43,21 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.CruiseName)
                     </td>
+                    <td>
+                        @item.CruiseLeaders.Count
+                        @if (item.CruiseLeaders.Count > 0)
+                    {
+                        var leader = item.CruiseLeaders.FirstOrDefault()?.Person;
+                            <text>(</text>
+                            @(leader?.Firstname + " " + leader?.Lastname)
+                            <text>)</text>
+                        }
+                        @if (item.CruiseLeaders.Count > 1)
+                {
+                            <text>...</text>
+                        }
+                    </td>
+
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.CruiseId }) |
                         @Html.ActionLink("Details", "Details", new { id = item.CruiseId }) |

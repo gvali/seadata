@@ -123,6 +123,9 @@
   <data name="ArticleHeadline" xml:space="preserve">
     <value>Pealkiri</value>
   </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Sünniaeg</value>
+  </data>
   <data name="FirstLastName" xml:space="preserve">
     <value>Ees-, perekonnanimi</value>
   </data>
@@ -140,6 +143,9 @@
   </data>
   <data name="LastnameLengthError" xml:space="preserve">
     <value>Perekonnanimi on liiga pikk.</value>
+  </data>
+  <data name="PersonCode" xml:space="preserve">
+    <value>Isikukood</value>
   </data>
   <data name="Person_Date2" xml:space="preserve">
     <value>Kuupäev</value>

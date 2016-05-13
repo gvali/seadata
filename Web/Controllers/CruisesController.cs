@@ -54,7 +54,16 @@ namespace Web.Controllers
             {
                 return HttpNotFound();
             }
-            return View(cruise);
+            var vm = new CruiseCreateEditViewModel()
+            {
+                Cruise = cruise,
+                LeadersMultiSelectList = new MultiSelectList(
+                    _uow.Persons.All,
+                    nameof(Person.PersonId), nameof(Person.FirstLastname),
+                    cruise.CruiseLeaders.Select(person => person.PersonId))
+            };
+
+            return View(vm);
         }
 
         // GET: Cruises/Create

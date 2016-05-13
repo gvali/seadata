@@ -159,4 +159,10 @@
   <data name="Person_Time2" xml:space="preserve">
     <value>Time</value>
   </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>BirthDate</value>
+  </data>
+  <data name="PersonCode" xml:space="preserve">
+    <value>PersonCode</value>
+  </data>
 </root>

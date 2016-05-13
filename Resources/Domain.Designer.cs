@@ -79,6 +79,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BirthDate.
+        /// </summary>
+        public static string BirthDate {
+            get {
+                return ResourceManager.GetString("BirthDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact type name too long..
         /// </summary>
         public static string ContactTypeNameLengthError {
@@ -183,6 +192,15 @@ namespace Resources {
         public static string Person_Time2 {
             get {
                 return ResourceManager.GetString("Person_Time2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PersonCode.
+        /// </summary>
+        public static string PersonCode {
+            get {
+                return ResourceManager.GetString("PersonCode", resourceCulture);
             }
         }
     }

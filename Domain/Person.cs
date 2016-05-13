@@ -26,6 +26,10 @@ namespace Domain
         public string Lastname { get; set; }
 
 
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        [Display(Name = nameof(Resources.Domain.PersonCode), ResourceType = typeof(Resources.Domain))]
+        public long PersonCode { get; set; }
+
         // demo fields for date/time handling
         // DataType attribute is used mainly for UI only, to render correct elements
         // https://msdn.microsoft.com/en-us/library/ms186724.aspx#DateandTimeDataTypes
@@ -33,8 +37,13 @@ namespace Domain
         // this is only tested against MS SQL / LocalDb
         // in views, use custom htmlhelpers - Html.DateTimeEditorFor, DateEditorFor, TimeEditorFor
 
+        [Display(Name = nameof(Resources.Domain.BirthDate), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.DateTime, ErrorMessageResourceName = "FieldMustBeDataTypeDateTime", ErrorMessageResourceType = typeof(Resources.Common))]
+        //[Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime BirthDate { get; set; }
+
         //[DataType(DataType.DateTime)]
-        //public DateTime DateTime { get; set; }
+        //public DateTime BirthTime { get; set; }
 
         //[DataType(DataType.Date)]
         //public DateTime Date { get; set; }
