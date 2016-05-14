@@ -61,10 +61,8 @@ namespace Web.Controllers
             var vm = new ProjectCreateEditViewModel()
             {
                 Project = project,
-                LeadersMultiSelectList = new MultiSelectList(
-                    _uow.Persons.All,
-                    nameof(Person.PersonId), nameof(Person.FirstLastname),
-                    project.ProjectLeaders.Select(person => person.PersonId))
+                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All,nameof(Person.PersonId), nameof(Person.FirstLastname),project.ProjectLeaders.Select(person => person.PersonId)),
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname),project.ProjectPersons.Select(person => person.PersonId))
             };
 
             return View(vm);
@@ -76,7 +74,9 @@ namespace Web.Controllers
             var vm = new ProjectCreateEditViewModel()
             {
                 //                PublisherSelectList = new SelectList(db.Publishers, nameof(Publisher.PublisherId), nameof(Publisher.PublisherName)),
-                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
+                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname)),
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
+
             };
             return View(vm);
         }
@@ -102,6 +102,14 @@ namespace Web.Controllers
                         PersonId = personId
                     });
                 }
+                foreach (var personId in vm.PersonIds)
+                {
+                    _uow.ProjectPersons.Add(new ProjectPerson()
+                    {
+                        Project = vm.Project,
+                        PersonId = personId
+                    });
+                }
                 _uow.Commit();
                 return RedirectToAction(nameof(Index));
             }
@@ -119,7 +127,6 @@ namespace Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Project project = db.Projects.Find(id);
             Project project = _uow.Projects.GetById(id);
 
             if (project == null)
@@ -130,10 +137,8 @@ namespace Web.Controllers
             var vm = new ProjectCreateEditViewModel()
             {
                 Project = project,
-                LeadersMultiSelectList = new MultiSelectList(
-                    _uow.Persons.All,
-                    nameof(Person.PersonId), nameof(Person.FirstLastname),
-                    project.ProjectLeaders.Select(person => person.PersonId))
+                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname)),
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
             };
 
 
@@ -146,20 +151,50 @@ namespace Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( Project project)
+        public ActionResult Edit( ProjectCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                //                db.Entry(project).State = EntityState.Modified;
-                //                db.SaveChanges();
-                //                return RedirectToAction("Index");
-                _uow.Projects.Update(project);
+                _uow.Projects.Update(vm.Project);
+                var blist = _uow.ProjectLeaders.All.Where(b => b.ProjectId == vm.Project.ProjectId).ToList();
+                foreach (var projectLeader in blist)
+                {
+                    _uow.ProjectLeaders.Delete(projectLeader);
+                }
                 _uow.Commit();
-                return RedirectToAction(nameof(Index));
 
+                foreach (var leaderId in vm.LeaderIds)
+                {
+                    _uow.ProjectLeaders.Add(new ProjectLeader()
+                    {
+                        Project = vm.Project,
+                        PersonId = leaderId
+                    });
+                }
+                _uow.Commit();
+                var personlist = _uow.ProjectPersons.All.Where(b => b.ProjectId == vm.Project.ProjectId).ToList();
+
+                foreach (var projectPerson in personlist)
+                    {
+                        _uow.ProjectPersons.Delete(projectPerson);
+                    }
+                _uow.Commit();
+
+                foreach (var personId in vm.PersonIds)
+                    {
+                        _uow.ProjectPersons.Add(new ProjectPerson()
+                        {
+                            Project = vm.Project,
+                            PersonId = personId
+                        });
+
+                    }
+                _uow.Commit();
+
+                return RedirectToAction(nameof(Index));
             }
-            //ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "Firstname", project.PersonId);
-            return View(project);
+
+            return View(vm);
         }
 
         // GET: Projects/Delete/5

@@ -165,4 +165,22 @@
   <data name="PersonCode" xml:space="preserve">
     <value>PersonCode</value>
   </data>
+  <data name="CruiseName" xml:space="preserve">
+    <value>CruiseName</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>EndDate</value>
+  </data>
+  <data name="ProjectEnd" xml:space="preserve">
+    <value>ProjectEnd</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>ProjectName</value>
+  </data>
+  <data name="ProjectStart" xml:space="preserve">
+    <value>ProjectStart</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>StartDate</value>
+  </data>
 </root>

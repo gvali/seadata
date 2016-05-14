@@ -32,6 +32,10 @@ namespace Web.ViewModels
 
         public int[] LeaderIds { get; set; }
         public MultiSelectList LeadersMultiSelectList { get; set; }
+
+        public int[] PersonIds { get; set; }
+        public MultiSelectList PersonsMultiSelectList { get; set; }
+
     }
 
 }

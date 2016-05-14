@@ -60,7 +60,11 @@ namespace Web.Controllers
                 LeadersMultiSelectList = new MultiSelectList(
                     _uow.Persons.All,
                     nameof(Person.PersonId), nameof(Person.FirstLastname),
-                    cruise.CruiseLeaders.Select(person => person.PersonId))
+                    cruise.CruiseLeaders.Select(person => person.PersonId)),
+                PersonsMultiSelectList = new MultiSelectList(
+                    _uow.Persons.All,
+                    nameof(Person.PersonId), nameof(Person.FirstLastname),
+                    cruise.CruisePersons.Select(person => person.PersonId)),
             };
 
             return View(vm);
@@ -72,7 +76,8 @@ namespace Web.Controllers
             var vm = new CruiseCreateEditViewModel()
             {
 //                PublisherSelectList = new SelectList(db.Publishers, nameof(Publisher.PublisherId), nameof(Publisher.PublisherName)),
-                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
+                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname)),
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
             };
 
             return View(vm);
@@ -98,6 +103,16 @@ namespace Web.Controllers
                         PersonId = personId
                     });
                 }
+
+                foreach (var personId in vm.PersonIds)
+                {
+                    _uow.CruisePersons.Add(new CruisePerson()
+                    {
+                        Cruise = vm.Cruise,
+                        PersonId = personId
+                    });
+                }
+
                 _uow.Commit();
                 return RedirectToAction(nameof(Index));
 
@@ -120,6 +135,7 @@ namespace Web.Controllers
             }
             //Cruise cruise = db.Cruises.Find(id);
             var cruise = _uow.Cruises.GetById(id);
+
             if (cruise == null)
             {
                 return HttpNotFound();
@@ -127,12 +143,8 @@ namespace Web.Controllers
             var vm = new CruiseCreateEditViewModel()
             {
                 Cruise = cruise,
-                //LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
-                LeadersMultiSelectList = new MultiSelectList(
-                    _uow.Persons.All,
-                    nameof(Person.PersonId),nameof(Person.FirstLastname),
-                    cruise.CruiseLeaders.Select(person => person.PersonId)
-                    )
+                LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All,nameof(Person.PersonId),nameof(Person.FirstLastname),cruise.CruiseLeaders.Select(person => person.PersonId)),
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname), cruise.CruiseLeaders.Select(person => person.PersonId))
             };
 
             return View(vm);
@@ -143,23 +155,53 @@ namespace Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( Cruise cruise)
+        public ActionResult Edit(CruiseCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(cruise).State = EntityState.Modified;
-                //db.SaveChanges();
-                //return RedirectToAction("Index");
-                // do not get user id from html get/post!!!!
-             // person.UserId = User.Identity.GetUserId<int>();
 
-                _uow.Cruises.Update(cruise);
+                _uow.Cruises.Update(vm.Cruise);
                 _uow.Commit();
-                return RedirectToAction(nameof(Index));
 
+                var blist = _uow.CruiseLeaders.All.Where(b => b.CruiseId == vm.Cruise.CruiseId).ToList();
+                foreach (var cruiseLeader in blist)
+                {
+                    _uow.CruiseLeaders.Delete(cruiseLeader);
+                }
+                _uow.Commit();
+
+                foreach (var leaderId in vm.LeaderIds)
+                {
+                    _uow.CruiseLeaders.Add(new CruiseLeader()
+                    {
+                        Cruise = vm.Cruise,
+                        PersonId = leaderId
+                    });
+                }
+                _uow.Commit();
+                var personlist = _uow.CruisePersons.All.Where(b => b.CruiseId == vm.Cruise.CruiseId).ToList();
+
+                foreach (var cruisePerson in personlist)
+                {
+                    _uow.CruisePersons.Delete(cruisePerson);
+                }
+                _uow.Commit();
+
+                foreach (var personId in vm.PersonIds)
+                {
+                    _uow.CruisePersons.Add(new CruisePerson()
+                    {
+                        Cruise = vm.Cruise,
+                        PersonId = personId
+                    });
+
+                }
+                _uow.Commit();
+
+                return RedirectToAction(nameof(Index));
             }
 
-            return View(cruise);
+            return View(vm);
         }
 
         // GET: Cruises/Delete/5

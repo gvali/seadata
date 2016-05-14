@@ -19,6 +19,51 @@
             @Html.DisplayFor(model => model.Project.ProjectName)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ProjectLeaders)
+        </dt>
+
+        <dd>
+            @if (Model.Project.ProjectLeaders.Count > 0)
+            {
+                foreach (var leader in Model.Project.ProjectLeaders)
+                {
+                    @(leader.Person.Firstname + " " + leader.Person.Lastname)<br>
+                }
+            }
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.StartDate)
+        </dt>
+        <dd>
+            @Model.Project.StartDate
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.EndDate)
+        </dt>
+        <dd>
+            @Model.Project.EndDate
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.ProjectPersons)
+        </dt>
+
+        <dd>
+            @if (Model.Project.ProjectPersons.Count > 0)
+            {
+                foreach (var person in Model.Project.ProjectPersons)
+                {
+                    @(person.Person.Firstname + " " + person.Person.Lastname)<br>
+                }
+            }
+
+        </dd>
+
+
     </dl>
 
 </div>

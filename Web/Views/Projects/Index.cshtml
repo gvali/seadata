@@ -23,11 +23,18 @@
         <table class="table">
             <tr>
                 @*<th>
-                        @Html.DisplayNameFor(model => model.CruiseLeader.Firstname)
+                        @Html.DisplayNameFor(model => model.ProjectLeader.Firstname)
                     </th>*@
                 <th>
                     @Html.DisplayNameFor(model => model.Projects.FirstOrDefault().ProjectName)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Projects.FirstOrDefault().ProjectLeaders)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Projects.FirstOrDefault().ProjectPersons)
+                </th>
+
                 <th></th>
             </tr>
 
@@ -35,11 +42,37 @@
             {
                 <tr>
                     @*<td>
-                            @Html.DisplayFor(modelItem => item.CruiseLeader.Firstname)
+                            @Html.DisplayFor(modelItem => item.ProjectLeader.Firstname)
                         </td>*@
                     <td>
                         @Html.DisplayFor(modelItem => item.ProjectName)
                     </td>
+
+                    <td>
+                        @item.ProjectLeaders.Count
+                        @if (item.ProjectLeaders.Count > 0)
+                        {
+                            var leader = item.ProjectLeaders.FirstOrDefault()?.Person;
+                            <text>(</text>
+                            @(leader?.Firstname + " " + leader?.Lastname)
+                            <text>)</text>
+                        }
+                        @if (item.ProjectLeaders.Count > 1)
+                        {
+                            <text>...</text>
+                        }
+                    </td>
+                    <td>
+                        @if (item.ProjectPersons.Count > 0)
+                        {
+                            @item.ProjectPersons.Count
+                        }
+                        @if (item.ProjectPersons.Count < 1)
+                        {
+                            <text>Persons not set</text>
+                        }
+                    </td>
+
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) |
                         @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |

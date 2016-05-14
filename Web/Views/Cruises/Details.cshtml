@@ -22,13 +22,50 @@
             @Html.DisplayFor(model => model.Cruise.CruiseName)
         </dd>
 
-        @*<dt>
-            @Html.DisplayNameFor(model => model.CruiseName)
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruise.CruiseLeaders)
+        </dt>
+
+        <dd>            
+            @if (Model.Cruise.CruiseLeaders.Count > 0)
+            {
+                foreach (var leader in Model.Cruise.CruiseLeaders)
+                {
+                    @(leader.Person.Firstname + " " + leader.Person.Lastname)<br>
+                }
+            }
+            
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruise.StartDate)
+        </dt>
+        <dd>
+            @Model.Cruise.StartDate
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruise.EndDate)
+        </dt>
+        <dd>
+            @Model.Cruise.EndDate
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cruise.CruisePersons)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CruiseName)
-        </dd>*@
+            @if (Model.Cruise.CruisePersons.Count > 0)
+            {
+                foreach (var person in Model.Cruise.CruisePersons)
+                {
+                    @(person.Person.Firstname + " " + person.Person.Lastname)<br>
+                }
+            }
+
+        </dd>
 
     </dl>
 </div>

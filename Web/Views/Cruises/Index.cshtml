@@ -30,6 +30,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Cruises.FirstOrDefault().CruiseLeaders)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cruises.FirstOrDefault().CruisePersons)
+                </th>
 
                 <th></th>
             </tr>
@@ -46,16 +49,28 @@
                     <td>
                         @item.CruiseLeaders.Count
                         @if (item.CruiseLeaders.Count > 0)
-                    {
-                        var leader = item.CruiseLeaders.FirstOrDefault()?.Person;
+                        {
+                            var leader = item.CruiseLeaders.FirstOrDefault()?.Person;
                             <text>(</text>
                             @(leader?.Firstname + " " + leader?.Lastname)
                             <text>)</text>
                         }
                         @if (item.CruiseLeaders.Count > 1)
-                {
+                        {
                             <text>...</text>
                         }
+                    </td>
+                    <td>
+                        @if (item.CruisePersons.Count > 0)
+                        {
+                            @item.CruisePersons.Count
+                        }
+                        @if (item.CruisePersons.Count < 1)
+                        {
+                            <text>Persons not set</text>
+                        }
+
+                        
                     </td>
 
                     <td>

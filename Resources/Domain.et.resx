@@ -126,6 +126,12 @@
   <data name="BirthDate" xml:space="preserve">
     <value>Sünniaeg</value>
   </data>
+  <data name="CruiseName" xml:space="preserve">
+    <value>Kruiisi nimi</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Lõpp kuupäev</value>
+  </data>
   <data name="FirstLastName" xml:space="preserve">
     <value>Ees-, perekonnanimi</value>
   </data>
@@ -156,7 +162,19 @@
   <data name="Person_Time2" xml:space="preserve">
     <value>Kellaaeg</value>
   </data>
+  <data name="ProjectEnd" xml:space="preserve">
+    <value>Projekti lõpp</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Projektinimi</value>
+  </data>
+  <data name="ProjectStart" xml:space="preserve">
+    <value>Projekti algus</value>
+  </data>
   <data name="SelectOptionLabel" xml:space="preserve">
     <value>--- Vali! ---</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Algus kuupäev</value>
   </data>
 </root>

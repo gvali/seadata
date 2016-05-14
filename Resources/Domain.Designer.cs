@@ -106,6 +106,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CruiseName.
+        /// </summary>
+        public static string CruiseName {
+            get {
+                return ResourceManager.GetString("CruiseName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EndDate.
+        /// </summary>
+        public static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string EntityPrimaryKey {
@@ -201,6 +219,42 @@ namespace Resources {
         public static string PersonCode {
             get {
                 return ResourceManager.GetString("PersonCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ProjectEnd.
+        /// </summary>
+        public static string ProjectEnd {
+            get {
+                return ResourceManager.GetString("ProjectEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ProjectName.
+        /// </summary>
+        public static string ProjectName {
+            get {
+                return ResourceManager.GetString("ProjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ProjectStart.
+        /// </summary>
+        public static string ProjectStart {
+            get {
+                return ResourceManager.GetString("ProjectStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StartDate.
+        /// </summary>
+        public static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
             }
         }
     }
