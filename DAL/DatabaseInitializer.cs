@@ -23,12 +23,27 @@ namespace DAL
             SeedArticles(context);
             SeedContacts(context);
             SeedProjects(context);
-
+            SeedCruises(context);
+            SeedStationTypes(context);
             // restore state
             context.Configuration.AutoDetectChangesEnabled = autoDetectChangesEnabled;
 
             base.Seed(context);
         }
+
+        private void SeedStationTypes(DataBaseContext context)
+        {
+            context.StationTypes.Add(new StationType()
+            {
+                StationTypeName = new MultiLangString("Baltic standard", "en", "Läänemere standardjaam", "StationType.0")
+            });
+            context.StationTypes.Add(new StationType()
+            {
+                StationTypeName = new MultiLangString("National monitoring", "en", "Riiklik seirejaam", "StationType.0")
+            });
+            context.SaveChanges();
+        }
+
 
         private void SeedProjects(DataBaseContext context)
         {
@@ -37,7 +52,21 @@ namespace DAL
             {
                 ProjectName="Pr01",
             });
+            context.SaveChanges();
         }
+
+        private void SeedCruises(DataBaseContext context)
+        {
+            var p = new Cruise();
+            context.Cruises.Add(new Cruise()
+            {
+                CruiseName = "Cr01",
+                StartDate = DateTime.Parse("2015-01-01"),
+                EndDate= DateTime.Parse("2015-01-10")
+            });
+            context.SaveChanges();
+        }
+
 
         private void SeedContacts(DataBaseContext context)
         {

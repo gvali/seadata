@@ -36,6 +36,9 @@ namespace Web.ViewModels
         public int[] PersonIds { get; set; }
         public MultiSelectList PersonsMultiSelectList { get; set; }
 
+        public int[] StationIds { get; set; }
+        public MultiSelectList StationsMultiSelectList { get; set; }
+
     }
 
 }

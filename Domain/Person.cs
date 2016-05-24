@@ -72,7 +72,7 @@ namespace Domain
         public int UserId { get; set; }
         public virtual UserInt User { get; set; }
 
-        //public virtual List<Contact> Contacts { get; set; } = new List<Contact>();
+        public virtual List<Contact> Contacts { get; set; } = new List<Contact>();
 
         public virtual List<CruisePerson> CruisePersons { get; set; } = new List<CruisePerson>();
 

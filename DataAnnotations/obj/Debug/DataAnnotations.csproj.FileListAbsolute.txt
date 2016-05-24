@@ -7,6 +7,6 @@ C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\NLog.dl
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.xml
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\bin\Debug\NLog.xml
-C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.csprojResolveAssemblyReference.cache
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.dll
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.pdb
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\DataAnnotations\obj\Debug\DataAnnotations.csprojResolveAssemblyReference.cache

@@ -8,10 +8,8 @@ namespace Domain
         public int MeasurementId { get; set; }
         public int StationId { get; set; }
         public float MeasurementDepth { get; set; }
-        public float MeasurementTemperature { get; set; }
-        public float MeasurementSalinity { get; set; }
-        public float MeasurementOxygen { get; set; }
-        public float MeasurementChlorophyll { get; set; }
+        public int MeasurementType { get; set; }
+        public int MeasurementValue { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime MeasurementDateTime { get; set; }
         [DataType(DataType.Date)]

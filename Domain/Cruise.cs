@@ -29,6 +29,7 @@ namespace Domain
 
         public virtual List<CruisePerson> CruisePersons { get; set; } = new List<CruisePerson>();
 
+        [Required]
         public virtual List<CruiseStation> CruiseStations { get; set; } = new List<CruiseStation>();
 
     }

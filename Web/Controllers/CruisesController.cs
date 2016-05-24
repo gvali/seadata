@@ -65,6 +65,10 @@ namespace Web.Controllers
                     _uow.Persons.All,
                     nameof(Person.PersonId), nameof(Person.FirstLastname),
                     cruise.CruisePersons.Select(person => person.PersonId)),
+                StationsMultiSelectList = new MultiSelectList(
+                    _uow.Stations.All,
+                    nameof(Station.StationId), nameof(Station.StationName),
+                    cruise.CruiseStations.Select(station => station.StationId)),
             };
 
             return View(vm);
@@ -77,7 +81,8 @@ namespace Web.Controllers
             {
 //                PublisherSelectList = new SelectList(db.Publishers, nameof(Publisher.PublisherId), nameof(Publisher.PublisherName)),
                 LeadersMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname)),
-                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname))
+                PersonsMultiSelectList = new MultiSelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname)),
+                StationsMultiSelectList = new MultiSelectList(_uow.Stations.All,nameof(Station.StationId), nameof(Station.StationName))
             };
 
             return View(vm);
@@ -110,6 +115,15 @@ namespace Web.Controllers
                     {
                         Cruise = vm.Cruise,
                         PersonId = personId
+                    });
+                }
+
+                foreach (var stationId in vm.StationIds)
+                {
+                    _uow.CruiseStations.Add(new CruiseStation()
+                    {
+                        Cruise = vm.Cruise,
+                        StationId = stationId
                     });
                 }
 

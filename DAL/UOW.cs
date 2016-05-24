@@ -47,7 +47,8 @@ namespace DAL
         public IEFRepository<ContactType> ContactTypes => GetStandardRepo<ContactType>();
         public IEFRepository<MultiLangString> MultiLangStrings => GetStandardRepo<MultiLangString>();
         public IEFRepository<Translation> Translations => GetStandardRepo<Translation>();
-
+        public IEFRepository<StationType> StationTypes => GetStandardRepo<StationType>();
+        public IEFRepository<MeasurementType>MeasurementTypes => GetStandardRepo<MeasurementType>();
 
         // repo with custom methods
         // add it also in EFRepositoryFactories.cs, in method GetCustomFactories
@@ -62,10 +63,14 @@ namespace DAL
         public ICruiseRepository Cruises => GetRepo<ICruiseRepository>();
         public ICruiseLeaderRepository CruiseLeaders => GetRepo<ICruiseLeaderRepository>();
         public ICruisePersonRepository CruisePersons => GetRepo<ICruisePersonRepository>();
+        public ICruiseStationRepository CruiseStations => GetRepo<ICruiseStationRepository>();
         public IProjectRepository Projects => GetRepo<IProjectRepository>();
-
         public IProjectLeaderRepository ProjectLeaders => GetRepo<IProjectLeaderRepository>();
         public IProjectPersonRepository ProjectPersons => GetRepo<IProjectPersonRepository>();
+        public IProjectCruiseRepository ProjectCruises => GetRepo<IProjectCruiseRepository>();
+
+        public IStationRepository Stations => GetRepo<IStationRepository>();
+        public IMeasurementRepository Measurements => GetRepo<IMeasurementRepository>();
 
         public IArticleRepository Articles => GetRepo<IArticleRepository>();
 

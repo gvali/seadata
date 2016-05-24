@@ -183,4 +183,10 @@
   <data name="StartDate" xml:space="preserve">
     <value>StartDate</value>
   </data>
+  <data name="StationName" xml:space="preserve">
+    <value>StationName</value>
+  </data>
+  <data name="StationTypeName" xml:space="preserve">
+    <value>StationTypeName</value>
+  </data>
 </root>

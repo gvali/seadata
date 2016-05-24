@@ -177,4 +177,10 @@
   <data name="StartDate" xml:space="preserve">
     <value>Algus kuupäev</value>
   </data>
+  <data name="StationName" xml:space="preserve">
+    <value>Jaama nimi</value>
+  </data>
+  <data name="StationTypeName" xml:space="preserve">
+    <value>Jaama tüüp</value>
+  </data>
 </root>

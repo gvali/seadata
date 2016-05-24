@@ -102,7 +102,8 @@
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.PersonId }) |
                     @Html.ActionLink("Details", "Details", new { id = item.PersonId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.PersonId })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PersonId }) |
+                    @Html.ActionLink("Add contact","Edit", "Contacts", new { id = item.PersonId },null)
                 </td>
             }
         </tr>

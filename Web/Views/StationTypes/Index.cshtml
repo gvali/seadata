@@ -1,0 +1,34 @@
+﻿@model Web.ViewModels.StationTypeIndexViewModel
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StationTypes.FirstOrDefault().StationTypeName)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model.StationTypes) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StationTypeName.Value)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.StationTypeId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.StationTypeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.StationTypeId })
+            </td>
+        </tr>
+    }
+    
+    </table>

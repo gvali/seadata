@@ -69,9 +69,21 @@
                         {
                             <text>Persons not set</text>
                         }
-
                         
                     </td>
+
+                    <td>
+                        @if (item.CruiseStations.Count > 0)
+                        {
+                            @item.CruiseStations.Count
+                        }
+                        @if (item.CruiseStations.Count < 1)
+                        {
+                            <text>Stations not set</text>
+                        }
+
+                    </td>
+
 
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.CruiseId }) |

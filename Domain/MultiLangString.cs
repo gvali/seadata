@@ -17,7 +17,9 @@ namespace Domain
         /// <summary>
         /// Default value, when translation is not found
         /// </summary>
-        [MaxLength(40960)]
+
+        [MinLength(1, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MaxLength(40960, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
         public string Value { get; set; }
 
         [MaxLength(255)]

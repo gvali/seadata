@@ -1,0 +1,39 @@
+﻿@using HtmlHelpers
+@using Web.Helpers
+@model Web.ViewModels.StationCreateEditViewModel
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Station.StationName, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Station.StationName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Station.StationName, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Station.StatLon, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Station.StatLon, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Station.StatLon, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Station.StatLat, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.Station.StatLat, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Station.StatLat, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Station.StationTypeId, "StationTypeId", htmlAttributes: new {@class = "control-label col-md-2"})
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.Station.StationTypeId, Model.StationTypeSelectList, "-- Select --", new {@class = "form-control"})
+        @Html.ValidationMessageFor(model => model.Station.StationTypeId, "", new {@class = "text-danger"})
+    </div>
+</div>
+
+<div>
+    @*@Html.ActionLink("Create", "Create","StationTypes", new {id = Model.Station.StationType.StationTypeId},null) |*@
+</div>

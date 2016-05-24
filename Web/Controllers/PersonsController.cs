@@ -102,6 +102,42 @@ namespace Web.Controllers
             return View(person);
         }
 
+        public ActionResult AddContact(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var contact = _uow.Contacts.All.Where(b => b.PersonId == id.Value).FirstOrDefault();
+            //var contact = _uow.Contacts.GetForUser(id.Value, User.Identity.GetUserId<int>());
+            if (contact == null)
+            {
+                return HttpNotFound();
+            }
+            var vm = new ContactCreateEditViewModel();
+            vm.Contact = contact;
+            vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new { t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate() }).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName));
+            vm.PersonSelectList = new SelectList(_uow.Persons.All, nameof(Person.PersonId), nameof(Person.FirstLastname));
+            return View(vm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddContact(ContactCreateEditViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                //vm.Comment.CreatedAt = DateTime.Now;
+                //vm.Comment.AuthorId = vm.Author.AuthorId;
+                //db.Comments.Add(vm.Comment);
+                //db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            //vm.Person = db.Authors.Find(vm.Author.AuthorId);
+            return View(vm);
+        }
+
+
         // GET: Persons/Edit/5
         public ActionResult Edit(int? id)
         {

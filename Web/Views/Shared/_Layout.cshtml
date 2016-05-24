@@ -47,12 +47,15 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("ApiDemo", "ApiDemo", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("HelperDemo", "Index", "HelperDemo", new {area = ""}, null)</li>
+                    <li>@Html.ActionLink("Contacts", "Index", "Contacts", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Persons", "Index", "Persons", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Cruises", "Index", "Cruises", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Projects", "Index", "Projects", new { area = "" }, null)</li>
 
                     @if (Request.IsAuthenticated)
                     {
+                        <li>@Html.ActionLink("Stations", "Index", "Stations", new {area = ""}, null)</li>
+
                     }
                     @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
@@ -60,12 +63,13 @@
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Contact Types", "Index", new { area = "Admin", controller = "ContactTypes" })</li>
-                                <li>@Html.ActionLink("Articles", "Index", new { area = "Admin", controller = "Articles" })</li>
+                                <li>@Html.ActionLink("StationTypes", "Index", "StationTypes", new { area = "" }, null)</li>                                
+                                <li>@Html.ActionLink("Contact Types", "Index", new {area = "Admin", controller = "ContactTypes"})</li>
+                                <li>@Html.ActionLink("Articles", "Index", new {area = "Admin", controller = "Articles"})</li>
                                 <li class="divider"></li>
-                                <li>@Html.ActionLink("MultiLangStrings", "Index", new { area = "Admin", controller = "MultiLangStrings" })</li>
-                                <li>@Html.ActionLink("Translations", "Index", new { area = "Admin", controller = "Translations" })</li>
-                                <li>@Html.ActionLink("System logs", "Index", new { area = "Admin", controller = "SystemLog" })</li>
+                                <li>@Html.ActionLink("MultiLangStrings", "Index", new {area = "Admin", controller = "MultiLangStrings"})</li>
+                                <li>@Html.ActionLink("Translations", "Index", new {area = "Admin", controller = "Translations"})</li>
+                                <li>@Html.ActionLink("System logs", "Index", new {area = "Admin", controller = "SystemLog"})</li>
                             </ul>
                         </li>
                         <li class="dropdown">

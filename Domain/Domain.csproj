@@ -56,6 +56,7 @@
     <Compile Include="Cruise.cs" />
     <Compile Include="CruiseLeader.cs" />
     <Compile Include="ProjectLeader.cs" />
+    <Compile Include="ProjectCruise.cs" />
     <Compile Include="ProjectPerson.cs" />
     <Compile Include="CruisePerson.cs" />
     <Compile Include="CruiseStation.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Station.cs" />
     <Compile Include="StationMeasurement.cs" />
+    <Compile Include="MeasurementType.cs" />
+    <Compile Include="StationType.cs" />
     <Compile Include="Translation.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -45,6 +45,8 @@ namespace DAL.Helpers
                 //{typeof(IRoleRepository), dbContext => new RoleRepository(dbContext)},
                 {typeof (IPersonRepository), dbContext => new PersonRepository(dbContext)},
                 {typeof (ICruiseRepository), dbContext => new CruiseRepository(dbContext)},
+                {typeof (IStationRepository), dbContext => new StationRepository(dbContext)},
+                {typeof (IMeasurementRepository), dbContext => new MeasurementRepository(dbContext)},
                 {typeof (IProjectRepository), dbContext => new ProjectRepository(dbContext)},
                 {typeof (IProjectLeaderRepository), dbContext => new ProjectLeaderRepository(dbContext)},
                 {typeof (IProjectPersonRepository), dbContext => new ProjectPersonRepository(dbContext)},

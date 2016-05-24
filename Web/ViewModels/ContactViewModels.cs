@@ -19,6 +19,7 @@ namespace Web.ViewModels
         public Contact Contact { get; set; }
         public SelectList PersonSelectList { get; set; }
         public SelectList ContactTypeSelectList { get; set; }
+
     }
 
 }

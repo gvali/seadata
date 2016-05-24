@@ -3,7 +3,6 @@ C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\bin\Debug\Resources.pdb
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\bin\Debug\et\Resources.resources.dll
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\bin\Debug\NLog.dll
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\bin\Debug\NLog.xml
-C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.Common.resources
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.Domain.resources
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.Account.resources
@@ -16,3 +15,4 @@ C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.csp
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\et\Resources.resources.dll
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.dll
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.pdb
+C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache

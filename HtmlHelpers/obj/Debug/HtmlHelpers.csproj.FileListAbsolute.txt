@@ -13,7 +13,6 @@ C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\bin\Debug\System.Web.
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\bin\Debug\System.Web.WebPages.xml
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\obj\Debug\HtmlHelpers.csprojResolveAssemblyReference.cache
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\obj\Debug\HtmlHelpers.Properties.MvcResources.resources
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\obj\Debug\HtmlHelpers.csproj.GenerateResource.Cache
 C:\Users\Kasutaja\OneDrive\itk\ASP.NET\SeaData\HtmlHelpers\obj\Debug\HtmlHelpers.dll

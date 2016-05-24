@@ -257,5 +257,23 @@ namespace Resources {
                 return ResourceManager.GetString("StartDate", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StationName.
+        /// </summary>
+        public static string StationName {
+            get {
+                return ResourceManager.GetString("StationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to StationTypeName.
+        /// </summary>
+        public static string StationTypeName {
+            get {
+                return ResourceManager.GetString("StationTypeName", resourceCulture);
+            }
+        }
     }
 }

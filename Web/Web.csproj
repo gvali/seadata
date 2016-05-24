@@ -290,6 +290,8 @@
     <Compile Include="Controllers\PersonsController.cs" />
     <Compile Include="Controllers\Api\ValuesController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\StationsController.cs" />
+    <Compile Include="Controllers\StationTypesController.cs" />
     <Compile Include="Filters\RequireHttpsAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -311,6 +313,8 @@
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ContactViewModels.cs" />
+    <Compile Include="ViewModels\StationTypeViewModels.cs" />
+    <Compile Include="ViewModels\StationViewModels.cs" />
     <Compile Include="ViewModels\ProjectViewModels.cs" />
     <Compile Include="ViewModels\HelperDemoViewModels.cs" />
     <Compile Include="ViewModels\HomeViewModels.cs" />
@@ -2400,6 +2404,17 @@
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Projects\_CreateEdit.cshtml" />
     <Content Include="Views\Cruises\_CreateEdit.cshtml" />
+    <Content Include="Views\Stations\Create.cshtml" />
+    <Content Include="Views\Stations\Delete.cshtml" />
+    <Content Include="Views\Stations\Details.cshtml" />
+    <Content Include="Views\Stations\Edit.cshtml" />
+    <Content Include="Views\Stations\Index.cshtml" />
+    <Content Include="Views\Stations\_CreateEdit.cshtml" />
+    <Content Include="Views\StationTypes\Create.cshtml" />
+    <Content Include="Views\StationTypes\Delete.cshtml" />
+    <Content Include="Views\StationTypes\Details.cshtml" />
+    <Content Include="Views\StationTypes\Edit.cshtml" />
+    <Content Include="Views\StationTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />

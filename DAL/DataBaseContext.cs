@@ -54,10 +54,11 @@ namespace DAL
         {
 
         }
-
         public IDbSet<Person> Persons { get; set; }
         public IDbSet<Contact> Contacts { get; set; }
         public IDbSet<ContactType> ContactTypes { get; set; }
+        public IDbSet<StationType> StationTypes { get; set; }
+        public IDbSet<MeasurementType> MeasurementTypes { get; set; }
         public IDbSet<Project> Projects { get; set; }
         public IDbSet<ProjectLeader> ProjectLeaders { get; set; }
         public IDbSet<ProjectPerson> ProjectPersons { get; set; }
@@ -164,7 +165,7 @@ namespace DAL
             base.Dispose(disposing);
         }
 
-//        public System.Data.Entity.DbSet<Domain.Person> People { get; set; }
+        //        public System.Data.Entity.DbSet<Domain.Person> People { get; set; }
 
         //        public System.Data.Entity.DbSet<Domain.Person> People { get; set; }
     }

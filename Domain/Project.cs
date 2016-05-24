@@ -26,8 +26,8 @@ namespace Domain
 
         [Required]
         public virtual List<ProjectLeader> ProjectLeaders { get; set; } = new List<ProjectLeader>();
-
         public virtual List<ProjectPerson> ProjectPersons { get; set; } = new List<ProjectPerson>();
+        public virtual List<ProjectCruise> ProjectCruises { get; set; } = new List<ProjectCruise>();
 
     }
 }

@@ -12,11 +12,9 @@ namespace Domain
     {
         public int ContactTypeId { get; set; }
 
-
         [ForeignKey(nameof(ContactTypeName))]
         public int ContactTypeNameId { get; set; }  
         public virtual MultiLangString ContactTypeName { get; set; }
-
 
         public virtual List<Contact> Contacts { get; set; } = new List<Contact>();
     }

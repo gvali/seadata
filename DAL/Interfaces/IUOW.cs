@@ -20,18 +20,25 @@ namespace DAL.Interfaces
 
         // standard autocreated repos, since we do not have any special methods in interfaces
         IEFRepository<ContactType> ContactTypes { get; }
+        IEFRepository<StationType> StationTypes { get; }
+        IEFRepository<MeasurementType> MeasurementTypes { get; }
         IEFRepository<MultiLangString> MultiLangStrings { get; }
         IEFRepository<Translation> Translations { get; }
 
 
         ICruiseRepository Cruises { get; }
         IProjectRepository Projects { get; }
+        IStationRepository Stations { get; }
+        IMeasurementRepository Measurements { get; }
 
         IProjectLeaderRepository ProjectLeaders { get; }
         IProjectPersonRepository ProjectPersons { get; }
+        IProjectCruiseRepository ProjectCruises { get; }
 
         ICruiseLeaderRepository CruiseLeaders { get; }
         ICruisePersonRepository CruisePersons { get; }
+        ICruiseStationRepository CruiseStations { get; }
+
         IPersonRepository Persons { get; }
         IContactRepository Contacts { get; }
         IArticleRepository Articles { get; }

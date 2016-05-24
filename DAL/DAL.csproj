@@ -79,6 +79,7 @@
     <Compile Include="Helpers\FormattedDbEntityValidationException.cs" />
     <Compile Include="Interfaces\IArticleRepository.cs" />
     <Compile Include="Interfaces\IContactRepository.cs" />
+    <Compile Include="Interfaces\ICruiseStationRepository.cs" />
     <Compile Include="Interfaces\ICruiseRepository.cs" />
     <Compile Include="Interfaces\IDbContext.cs" />
     <Compile Include="Interfaces\IEFRepository.cs" />
@@ -86,8 +87,11 @@
     <Compile Include="Interfaces\IPersonRepository.cs" />
     <Compile Include="Interfaces\ICruiseLeaderRepository.cs" />
     <Compile Include="Interfaces\ICruisePersonRepository.cs" />
+    <Compile Include="Interfaces\IProjectCruiseRepository.cs" />
     <Compile Include="Interfaces\IProjectPersonRepository.cs" />
     <Compile Include="Interfaces\IProjectLeaderRepository.cs" />
+    <Compile Include="Interfaces\IMeasurementRepository.cs" />
+    <Compile Include="Interfaces\IStationRepository.cs" />
     <Compile Include="Interfaces\IProjectRepository.cs" />
     <Compile Include="Interfaces\IRoleRepository.cs" />
     <Compile Include="Interfaces\IUOW.cs" />
@@ -100,13 +104,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
     <Compile Include="Repositories\ContactRepository.cs" />
+    <Compile Include="Repositories\CruiseStationRepository.cs" />
     <Compile Include="Repositories\EFRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\CruiseRepository.cs" />
     <Compile Include="Repositories\CruiseLeaderRepository.cs" />
     <Compile Include="Repositories\CruisePersonRepository.cs" />
+    <Compile Include="Repositories\ProjectCruiseRepository.cs" />
     <Compile Include="Repositories\ProjectPersonRepository.cs" />
     <Compile Include="Repositories\ProjectLeaderRepository.cs" />
+    <Compile Include="Repositories\MeasurementRepository.cs" />
+    <Compile Include="Repositories\StationRepository.cs" />
     <Compile Include="Repositories\ProjectRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\UserClaimRepository.cs" />

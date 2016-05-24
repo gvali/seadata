@@ -1,0 +1,58 @@
+﻿@model Web.ViewModels.StationIndexViewModel
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-12">
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stations.FirstOrDefault().StationName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stations.FirstOrDefault().StatLon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stations.FirstOrDefault().StatLat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stations.FirstOrDefault().StationType.StationTypeName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Stations)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StationName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StatLon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StatLat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StationType.StationTypeName.Value)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.StationId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.StationId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.StationId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
